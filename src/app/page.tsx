@@ -1,65 +1,119 @@
-import Image from "next/image";
 
-export default function Home() {
-  return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+import Image from "next/image";
+import Link from "next/link";
+import localFont from 'next/font/local'
+import alejandroMP from './alemp.png';
+import resume from './resume.png';
+import linkedin from './linkedin.webp';
+import github from './github.png';
+import { motion } from "framer-motion";
+
+export const marioFont = localFont({
+  src: './mario-party-hudson/Mario-Party-Hudson-Font.ttf',
+  variable: '--font-mario'
+})
+export const anotherMarioFont = localFont({
+  src:'./mario-party-hudson/dicecondesedlight.ttf',
+  variable: '--font-anotherMario'
+});
+const toad = 'https://placehold.co/100x100/000000/FFFFFF?text=Toad';
+ const alejandro = alejandroMP;
+ const GithubLogo = github;
+  const resumeIm = resume 
+  const LinkLogo = linkedin;
+   const capymonkey = 'https://placehold.co/400x250/000000/FFFFFF?text=Video+Content+Placeholder';
+    const NavButtons = () => ( 
+  // The 'flex' class makes the buttons horizontal. // The 'space-x-4' class handles the padding/spacing between the buttons.
+   <div className= "grid grid-cols-2 md:flex md:space-x-13 w-full md:w-auto px-1 md:px-0">
+    <Link href="/" passHref>  <button className="bg-red-600 hover:scale-105 text-center hover:bg-purple-700 text-white font-semibold rounded-2xl md:rounded-4xl shadow-md transition text-xl md:text-5xl py-2 md:py-4 w-full md:w-82 h-12 md:h-20 tracking-widest [text-shadow:-2px_3px_#000] md:[text-shadow:-3px_6px_#000000,_-5px_-2px_#000000,_3px_3px_#000000,_-3px_3px_#000000]">HOME</button></Link>
+    <Link href="/about" passHref><button className={'bg-amber-300 hover:scale-105 hover:bg-purple-700 text-white font-semibold rounded-2xl md:rounded-4xl shadow-md transition text-xl md:text-5xl py-2 md:py-4 w-full md:w-82 h-12 md:h-20 tracking-widest [text-shadow:-2px_3px_#000]  md:[text-shadow:-3px_6px_#000000,_-5px_-2px_#000000,_3px_3px_#000000,_-3px_3px_#000000]'}>ABOUT</button> </Link>
+     <Link href="/experience" passHref><button className={'bg-blue-500 hover:scale-105 hover:bg-purple-700 text-white font-semibold rounded-2xl md:rounded-4xl shadow-md transition text-xl md:text-5xl py-2 md:py-4 w-full md:w-82 h-12 md:h-20 [text-shadow:-2px_3px_#000] md:[text-shadow:-3px_6px_#000] md:[text-shadow:-3px_6px_#000000,_-5px_-2px_#000000,_3px_3px_#000000,_-3px_3px_#000000]'}>EXPERIENCE</button>  </Link>
+    <Link href="/projects" passHref> <button className={' bg-emerald-400 hover:scale-105 text-white hover:bg-purple-700 font-semibold rounded-2xl md:rounded-4xl shadow-md transition text-xl md:text-5xl py-2 md:py-4 w-full md:w-82 h-12 md:h-20 tracking-widest [text-shadow:-2px_3px_#000] md:[text-shadow:-3px_6px_#000] md:[text-shadow:-3px_6px_#000000,_-5px_-2px_#000000,_3px_3px_#000000,_-3px_3px_#000000] '}>PROJECTS</button></Link>
+    </div> 
+    ); 
+    
+  
+    const ProfileSection = () => (
+    <div className="flex flex-col items-center space-y-2 text-white text-right"> 
+    <div className={`
+    text-7xl
+      md:text-[150px] 
+      font-extrabold 
+      font-mario 
+      leading-none 
+    text-white 
+      [text-shadow:5px_5px_#000000,_-4px_-4px_#000000,_5px_-5px_#000000,_-5px_5px_#000000]
+      
+      `}>
+        <span>A</span>
+        <span>l</span>
+        <span>e</span>
+        <span>j</span>
+        <span>a</span>
+        <span>n</span>
+        <span>d</span>
+        <span>r</span>
+        <span>o</span>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        
+        <div className={`
+        text-7xl
+      md:text-[150px] 
+      font-extrabold 
+      font-mario 
+      leading-none 
+      md:-mt-6
+    text-white 
+      [text-shadow:5px_5px_#000000,_-4px_-4px_#000000,_5px_-5px_#000000,_-5px_5px_#000000]
+      
+      `}>
+        <span>J</span>
+        <span>a</span>
+        <span>i</span>
+        <span>m</span>
+        <span>e</span>
+        <span>s</span>
+        
+        
         </div>
-      </main>
-    </div>
-  );
-}
+
+    </div> 
+     ); 
+     export default function App(){ 
+      return (
+         <div className={`min-h-screen font-sans p-8 ${anotherMarioFont.className} bg-cover bg-gray-900 no-scrollbar`}
+                          style={{backgroundImage: 'url(/StarTile_SpaceJam.png)',backgroundAttachment: 'fixed', backgroundSize:'115% 115%', imageRendering: 'pixelated'}} >
+         {
+          /* 💥 FIX: Header Bar with Name and Buttons on one line The 'flex justify-between items-center' classes achieve the requested layout. */} 
+          <header className="flex justify-between items-center w-full mb-15"> 
+          
+          {/* Buttons on the right, spaced using NavButtons' space-x-4 */}
+          <NavButtons />
+          </header> {/* --- Main Content Section --- */} 
+          <main className="flex flex-col md:flex-row items-center md:items-start md:space-x-0">
+          {/* Left Column: Text and Links */} <div className="w-full md:w-2/3"> 
+         <ProfileSection /> 
+            </div> {/* Right Column: Profile Image Placeholder */} 
+         <div className="w-full md:w-1/3 flex justify-center md:justify-start mt-8 md:mt-0">
+         <div className="w-52 h-53 md:w-62 md:h-63 rounded-full shadow-lg border-0.01 overflow-hidden flex justify-center items-center float">
+              <Image src={alejandroMP} alt="Profile Placeholder" 
+          className="w-70 h-55 md:w-85 md:h-70 object-cover overflow-hidden hover:rotate-z-45" />
+         </div>
+           </div>
+   </main> 
+                  <div className="flex space-x-10 md:space-x-20 mt-6 md:items-right justify-center">
+          
+          <a href="https://www.github.com/alecocosette" target="_blank" rel="noopener noreferrer" 
+          className="md:opacity-75 hover:opacity-100 transition flex items-center md:space-x-4 px-2 md:px-4 md:w-40 md:h-15 w-20 h-10 bg-black">
+           <span className=" text-white md:text-2xl text-xs">GitHub</span> <Image src={GithubLogo} alt="Github Logo" className="md:w-35 md:h-15 w-10 h-10 bg-black  p-1"  /> 
+       </a>
+
+            <a href="https://www.linkedin.com/in/alejandro-jaimes-coco/" target="_blank" rel="noopener noreferrer" 
+          className="md:opacity-75 hover:opacity-100 transition flex items-center md:space-x-4  px-2 md:px-4 md:w-40 md:h-15 w-20 h-10 bg-gray-400">
+           <span className=" text-white md:text-2xl text-xs ">Resume</span> <Image src={resumeIm} alt="Reumse Logo" className="md:w-35 md:h-15 w-10 h-8  md:px-1 bg-gray-400 p-1"  /> 
+       </a>
+
+          <a href="https://www.linkedin.com/in/alejandro-jaimes-coco/" target="_blank" rel="noopener noreferrer" 
+          className="md:opacity-75 hover:opacity-100 transition flex items-center md:space-x-3  px-2 md:px-4 md:w-40 md:h-15 w-20 h-10 bg-blue-500">
+           <span className=" text-sky-100 md:text-2xl text-xs">LinkedIn</span> <Image src={LinkLogo} alt="LinkedIn Logo" className="md:w-35 md:h-15 w-10 h-10 scale-100 bg-blue-500"  /> 
+       </a> </div>    </div>   ); }
