@@ -42,8 +42,7 @@ const anotherToadIm = anotherToad;
  const GithubLogo = github;
   const resumeIm = resume 
   const LinkLogo = linkedin;
-   const capymonkey = 'https://placehold.co/400x250/000000/FFFFFF?text=Video+Content+Placeholder';
-   const aleImageList = [{src: ale3Im, alt: "me"}, {src: ale2Im, alt:""}, {src: ale1Im, alt:""}, {src: ale4Im, alt: ""},{src: ale5Im, alt: ""},{src: ale6Im, alt: ""}];
+   const aleImageList = [{src: ale3Im, alt: "me"}, {src: ale2Im, alt:""}, {src: ale1Im, alt:""}, {src: ale4Im, alt: ""},{src: ale5Im, alt: ""},{src: ale6Im, alt: ""}, {src: ale7Im, alt: ""}];
    const aleListSize = aleImageList.length;
    const BSList = [{src: alejandro, alt: "me"}, {src: GithubLogo, alt:""}, {src: resumeIm, alt:""}, {src: LinkLogo, alt: ""}];
    const BSSize = BSList.length;
@@ -98,20 +97,16 @@ const anotherToadIm = anotherToad;
       return (
          <div className={`min-h-screen font-sans p-8 ${anotherMarioFont.className} bg-cover bg-gray-900 no-scrollbar`}
                  style={{backgroundImage: 'url(/StarTile_SpaceJam.png)',backgroundAttachment: 'fixed', backgroundSize:'115% 115%', imageRendering: 'pixelated'}} >
-         {
-          /* 💥 FIX: Header Bar with Name and Buttons on one line The 'flex justify-between items-center' classes achieve the requested layout. */} 
+         
           <header className="flex justify-between items-center w-full  "> 
           
-          {/* Buttons on the right, spaced using NavButtons' space-x-4 */}
           <NavButtons />
-          </header> {/* --- Main Content Section --- */} 
+          </header> 
 
 
           <main>
-          {/* Left Column: Text and Links */}  
+         
          <div className="flex flex-col justify-between md:flex-row items-center">
-        
-        {/* Left Column: Text 1 */}
         <div className="w-full md:w-1/2 p-4 md:p-27">
           <p className="text:lg md:text-3xl text-emerald-300 text-center [text-shadow:5px_5px_#000000,_-4px_-4px_#000000,_5px_-5px_#000000,_-5px_5px_#000000]">
             Hey, I am Alejandro Jaimes, a Venezuelan student at the University of Central Florida pursuing a Bachelor's degree in Computer Science.
@@ -119,7 +114,6 @@ const anotherToadIm = anotherToad;
           </p>
         </div>
 
-        {/* Right Column: Image Carousel */}
         <div className="w-full md:w-1/2 flex flex-col items-center p-4">
           <div className=" w-100 h-80 overflow-hidden flex items-center justify-center mb-2">
             <Image 
@@ -143,10 +137,10 @@ const anotherToadIm = anotherToad;
       </div>
       <div className="flex flex-col justify-between md:flex-row items-center">
         
-        {/* Left Column: Text 1 */}
+        
         
 
-        {/* Right Column: Image Carousel */}
+       
         <div className="w-full md:w-1/2 flex flex-col items-center p-4">
           <div className=" w-100 h-80 overflow-hidden flex items-center justify-center mb-2">
             <Image 
@@ -175,7 +169,6 @@ const anotherToadIm = anotherToad;
           </p>
         </div>
       </div>
-         {/* Right Column: Profile Image Placeholder */} 
          <div className="w-full md:w-1/3 flex justify-center mt-8 md:mt-0">
          
            </div>

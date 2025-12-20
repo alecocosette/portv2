@@ -61,30 +61,7 @@ const toad = 'https://placehold.co/100x100/000000/FFFFFF?text=Toad';
     ); 
     
   
-    const ProfileSection = () => (
-    <div className="flex flex-col items-center space-y-4 text-white text-right"> 
-    <h2 className={`
-      text-[150px] 
-      font-extrabold 
-      font-mario 
-      leading-none 
-    text-white 
-      [text-shadow:5px_5px_#000000,_-4px_-4px_#000000,_5px_-5px_#000000,_-5px_5px_#000000]
-      
-      `}>Alejandro</h2>
-        <h2 className={`
-      text-[150px] 
-      font-extrabold 
-      font-mario 
-      leading-none 
-      -mt-16
-    text-white 
-      [text-shadow:5px_5px_#000000,_-4px_-4px_#000000,_5px_-5px_#000000,_-5px_5px_#000000]
-      
-      `}>Jaimes</h2>
-
-    </div> 
-     ); 
+    
      export default function Projects(){ 
       const [topImageIndex, setTopImageIndex] = useState(0);
             const updateImage = (setter: React.Dispatch<React.SetStateAction<number>>, currentIndex: number, direction: number, listSize: number) => {
@@ -104,13 +81,11 @@ const toad = 'https://placehold.co/100x100/000000/FFFFFF?text=Toad';
         
          <div className={`min-h-screen font-sans p-8 ${anotherMarioFont.className} bg-cover bg-gray-900 no-scrollbar`}
                                    style={{backgroundImage: 'url(/StarTile_SpaceJam.png)',backgroundAttachment: 'fixed', backgroundSize:'115% 115%', imageRendering: 'pixelated'}} >
-         {
-          /* 💥 FIX: Header Bar with Name and Buttons on one line The 'flex justify-between items-center' classes achieve the requested layout. */} 
+         
           <header className="flex justify-between items-center w-full mb-15"> 
           
-          {/* Buttons on the right, spaced using NavButtons' space-x-4 */}
           <NavButtons />
-          </header> {/* --- Main Content Section --- */} 
+          </header> 
           
                     <div className="flex flex-col md:flex-row md:space-x-25 md:mt-6 items-center justify-center">
             
@@ -169,14 +144,14 @@ const toad = 'https://placehold.co/100x100/000000/FFFFFF?text=Toad';
                                                 </div>
                                                 <div className="flex md:space-x-45 space-x-10 items-center justify-center">
                                                   <button onClick={()=>updateImage(setTopImageIndex,topImageIndex,-1,aleListSize)} className="text-4xl hover:text-red-500 transition hover:scale-125">
-                                                    <Image src={arrowIm} alt="Left Arrow" className="w-10 h-10 md:w-15 md:h-15 transform rotate-180"/>
-                                                  </button>
-                                                  <Image src={rockyIm} alt="Rocky Icon" className="w-15 h-10 md:w-20 md:h-15 hover:rotate-x-180"/>
-                                                  <button onClick={()=>updateImage(setTopImageIndex,topImageIndex,1,aleListSize)} className="text-4xl hover:text-red-500 transition hover:scale-125">
-                                                      <Image src={arrowIm} alt="Right Arrow" className="w-10 h-10 md:w-15 md:h-15"/>
+           <Image src={arrowIm} alt="Left Arrow" className="w-10 h-10 md:w-15 md:h-15 transform rotate-180"/>
+              </button>
+                 <Image src={rockyIm} alt="Rocky Icon" className="w-15 h-10 md:w-20 md:h-15 hover:rotate-x-180"/>
+                  <button onClick={()=>updateImage(setTopImageIndex,topImageIndex,1,aleListSize)} className="text-4xl hover:text-red-500 transition hover:scale-125">
+          <Image src={arrowIm} alt="Right Arrow" className="w-10 h-10 md:w-15 md:h-15"/>
                                                     
-                                                  </button>
-                                                </div>
+          </button>
+         </div>
         </div> </div> 
          ); 
        }
