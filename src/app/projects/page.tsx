@@ -20,7 +20,7 @@ import noimage from '../noimage.png';
 import talktothehand from '../talktothehand.png';
 import nextstep from '../nextstep.jpg';
 import astrodog from '../astrodog.png';
-
+import trickytreats from '../Screenshot 2025-12-22 010921.png';
 export const marioFont = localFont({
   src: '../mario-party-hudson/Mario-Party-Hudson-Font.ttf',
   variable: '--font-mario'
@@ -29,6 +29,7 @@ export const anotherMarioFont = localFont({
   src:'../mario-party-hudson/dicecondesedlight.ttf',
   variable: '--font-anotherMario'
 });
+const Trickytreats = trickytreats;
 const noImage = noimage;
 const talkToTheHand = talktothehand;
 const nextStep = nextstep;
@@ -95,14 +96,14 @@ const toad = 'https://placehold.co/100x100/000000/FFFFFF?text=Toad';
         <span className=" text-white md:text-base items-start py-2 px-2">SNES Emulator, more details coming</span> 
             <span className=" text-white md:text-base items-start px-2">Technologies: C++, SDL2</span>
         </a>
-        <a href="https://www.github.com/alecocosette" target="_blank" rel="noopener noreferrer" 
+        <a href="https://devpost.com/software/talk-to-the-hand-lqouas" target="_blank" rel="noopener noreferrer" 
             className="md:opacity-85 hover:opacity-100  hover:scale-105 transition flex flex-col items-start space-x-4 w-70 h-75 bg-emerald-400 md:mb-0 mb-6" >
               
             <Image src={talkToTheHand} alt="TTTH Logo" className="w-70 h-35 bg-black"  /> <span className=" text-white md:text-xl text-lg items-start px-2 [text-shadow:2px_2px_#000000,_-2px_-2px_#000000,_2px_-2px_#000000,_-2px_2px_#000000]">Talk to the Hand (Oct 2025)</span> 
             <span className=" text-white items-start  py-2 px-2">Computer Vision 3D Shooter game made during Knight Hacks VIII </span> 
             <span className=" text-white items-start  px-2">Technologies: C#, Unity, Python, Mediapipe, OpenCV</span> 
         </a>
-        <a href="https://www.github.com/alecocosette" target="_blank" rel="noopener noreferrer" 
+        <a href="https://devpost.com/software/next-step-cme06a" target="_blank" rel="noopener noreferrer" 
             className="md:opacity-85 hover:opacity-100 hover:scale-105 transition flex flex-col items-start space-x-4 w-70 h-75 bg-blue-900 md:mb-0 mb-6">
             <Image src={nextStep} alt="Next Step Logo" className="w-70 h-35 bg-black "  /> <span className=" text-white md:text-xl text-lg items-start px-2 [text-shadow:2px_2px_#000000,_-2px_-2px_#000000,_2px_-2px_#000000,_-2px_2px_#000000]">Next Step (Sep 2025)</span>  
             <span className=" text-white items-start  py-1 px-2">AI Chatbot with voice used to test knowledge of insurances</span> 
@@ -115,17 +116,17 @@ const toad = 'https://placehold.co/100x100/000000/FFFFFF?text=Toad';
            </div>  
        <div className="flex flex-col md:flex-row md:space-x-25 md:mt-6 items-center justify-center">
           
-          <a href="https://www.github.com/alecocosette" target="_blank" rel="noopener noreferrer" 
+          <a href="https://alecoco.itch.io/astrodog" target="_blank" rel="noopener noreferrer" 
             className="md:opacity-85 hover:opacity-100 hover:scale-105 transition flex flex-col items-start space-x-4 w-70 h-75 bg-blue-600 md:mb-0 mb-6">
               
             <Image src={astroDog} alt="AstroDog Logo" className="w-70 h-35 bg-black "  /> <span className=" text-white md:text-xl text-lg items-start px-2 [text-shadow:2px_2px_#000000,_-2px_-2px_#000000,_2px_-2px_#000000,_-2px_2px_#000000]">AstroDog (Sep 2025)</span> 
             <span className=" text-white items-start  py-2 px-2">2D Platformer game made in Unity inspired on my dog for Game Dev Knights' Space Jam</span> 
             <span className=" text-white items-start  px-2">Technologies: C#, Unity</span> 
         </a>
-        <a href="https://www.github.com/alecocosette" target="_blank" rel="noopener noreferrer" 
+        <a href="https://alecoco.itch.io/tricky-treats" target="_blank" rel="noopener noreferrer" 
             className="md:opacity-85 hover:opacity-100  hover:scale-105 transition flex flex-col items-start space-x-4 w-70 h-75 bg-purple-800 md:mb-0 mb-6">
               
-            <Image src={GithubLogo} alt="Github Logo" className="w-70 h-35 bg-black "  /> <span className=" text-white md:text-xl text-lg items-start px-2 [text-shadow:2px_2px_#000000,_-2px_-2px_#000000,_2px_-2px_#000000,_-2px_2px_#000000]">Tricky Treats (Oct 2024)</span> 
+            <Image src={Trickytreats} alt="Github Logo" className="w-70 h-35 bg-black "  /> <span className=" text-white md:text-xl text-lg items-start px-2 [text-shadow:2px_2px_#000000,_-2px_-2px_#000000,_2px_-2px_#000000,_-2px_2px_#000000]">Tricky Treats (Oct 2024)</span> 
             <span className=" text-white items-start  py-2 px-2">2D Platformer, First game I have ever made by myself for Halloween</span> 
             <span className=" text-white items-start  px-2">Technologies: C#, Unity</span> 
         </a>
@@ -146,7 +147,7 @@ const toad = 'https://placehold.co/100x100/000000/FFFFFF?text=Toad';
                                                   <button onClick={()=>updateImage(setTopImageIndex,topImageIndex,-1,aleListSize)} className="text-4xl hover:text-red-500 transition hover:scale-125">
            <Image src={arrowIm} alt="Left Arrow" className="w-10 h-10 md:w-15 md:h-15 transform rotate-180"/>
               </button>
-                 <Image src={rockyIm} alt="Rocky Icon" className="w-15 h-10 md:w-20 md:h-15 hover:rotate-x-180"/>
+                 <Image src={rockyIm} alt="Rocky Icon" className="w-15 h-10 md:w-20 md:h-15 hover:scale-110"/>
                   <button onClick={()=>updateImage(setTopImageIndex,topImageIndex,1,aleListSize)} className="text-4xl hover:text-red-500 transition hover:scale-125">
           <Image src={arrowIm} alt="Right Arrow" className="w-10 h-10 md:w-15 md:h-15"/>
                                                     

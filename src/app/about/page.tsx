@@ -9,7 +9,6 @@ import resume from '../resume.png';
 import linkedin from '../linkedin.webp';
 import github from '../github.png';
 import arrow from '../arrow.webp';
-import anotherToad from '../ToadIcon_MarioPartyDS.png'
 import ale1 from '../IMG_0924.jpg';
 import ale2 from '../IMG_0925.jpg';
 import ale3 from '../IMG_0926.jpg';
@@ -18,6 +17,14 @@ import ale5 from '../IMG_0929.jpg';
 import ale6 from '../IMG_0931.jpg';
 import ale7 from '../IMG_0930.jpg';
 import rockyAsset from '../rockyAsset-removebg-preview.png'
+import bs1 from '../aboutRow21.jpg';
+import bs2 from '../aboutRow22.jpg';
+import bs3 from '../aboutRow23.jpg';
+import bs4 from '../aboutRow24.jpg';
+import bs5 from '../aboutRow25.jpg';
+import bs6 from '../aboutRow26.jpg';
+import bs7 from '../aboutRow27.jpg';
+import bs8 from '../aboutRow28.jpg';
 export const marioFont = localFont({
   src: '../mario-party-hudson/Mario-Party-Hudson-Font.ttf',
   variable: '--font-mario'
@@ -34,17 +41,22 @@ const ale4Im = ale4;
 const ale5Im = ale5;
 const ale6Im = ale6;
 const ale7Im = ale7;
-const toad = 'https://placehold.co/100x100/000000/FFFFFF?text=Toad';
-const git  = 'https://placehold.co/100x100/000000/FFFFFF?text=git';
+const bs1Im = bs1;
+const bs2Im = bs2;
+const bs3Im = bs3;
+const bs4Im = bs4;
+const bs5Im = bs5;
+const bs6Im = bs6;
+const bs7Im = bs7;
+const bs8Im = bs8;
 const arrowIm = arrow;
-const anotherToadIm = anotherToad;
  const alejandro = alejandroMP;
  const GithubLogo = github;
   const resumeIm = resume 
   const LinkLogo = linkedin;
    const aleImageList = [{src: ale3Im, alt: "me"}, {src: ale2Im, alt:""}, {src: ale1Im, alt:""}, {src: ale4Im, alt: ""},{src: ale5Im, alt: ""},{src: ale6Im, alt: ""}, {src: ale7Im, alt: ""}];
    const aleListSize = aleImageList.length;
-   const BSList = [{src: alejandro, alt: "me"}, {src: GithubLogo, alt:""}, {src: resumeIm, alt:""}, {src: LinkLogo, alt: ""}];
+   const BSList = [{src: bs2Im, alt: "me"}, {src: bs1Im, alt:""}, {src: bs4Im, alt: ""}, {src: bs5Im, alt: ""}, {src: bs6Im, alt: ""}, {src: bs7Im, alt: ""}, {src: bs8Im, alt: ""}];
    const BSSize = BSList.length;
     const NavButtons = () => ( 
   // The 'flex' class makes the buttons horizontal. // The 'space-x-4' class handles the padding/spacing between the buttons.
@@ -55,25 +67,6 @@ const anotherToadIm = anotherToad;
     <Link href="/projects" passHref> <button className={' bg-emerald-400 hover:scale-105 text-white hover:bg-purple-700 font-semibold rounded-2xl md:rounded-4xl shadow-md transition text-xl md:text-5xl py-2 md:py-4 w-full md:w-82 h-12 md:h-20 tracking-widest [text-shadow:-2px_3px_#000] md:[text-shadow:-3px_6px_#000] md:[text-shadow:-3px_6px_#000000,_-5px_-2px_#000000,_3px_3px_#000000,_-3px_3px_#000000] '}>PROJECTS</button></Link>
     </div> 
     ); 
-    
-  
-    const ProfileSection = () => (
-    <div className="flex flex-col items-center space-y-0 text-white text-right"> 
-    <h2 className={`
-      text-[60px] 
-      font-extrabold 
-      font-mario 
-      leading-none 
-    text-white 
-      [text-shadow:5px_5px_#000000,_-4px_-4px_#000000,_5px_-5px_#000000,_-5px_5px_#000000]
-      
-      `}>About
-      
-     </h2>
-        
-
-    </div> 
-     ); 
 
 
 
@@ -127,7 +120,7 @@ const anotherToadIm = anotherToad;
             <button onClick={()=>updateImage(setTopImageIndex,topImageIndex,-1,aleListSize)} className="text-4xl hover:text-red-500 transition hover:scale-125">
               <Image src={arrowIm} alt="Left Arrow" className="w-15 md:w-10 md:h-10 h-12 transform rotate-180"/>
             </button>
-            <Image src={rockyIm} alt="Rocky Icon" className="md:w-15 md:h-10 w-18 h-12 hover:rotate-x-180"/>
+            <Image src={rockyIm} alt="Rocky Icon" className="md:w-15 md:h-10 w-18 h-12 hover:scale-110"/>
             <button onClick={()=>updateImage(setTopImageIndex,topImageIndex,1,aleListSize)} className="text-4xl hover:text-red-500 transition hover:scale-125">
                 <Image src={arrowIm} alt="Right Arrow" className="w-15 md:w-10 md:h-10 h-12"/>
               
@@ -146,8 +139,7 @@ const anotherToadIm = anotherToad;
             <Image 
               src={currentBottomImage.src} 
               alt={currentBottomImage.alt} 
-              width={240} 
-              height={160}
+             
               className="object-cover" 
             />
           </div>
@@ -155,7 +147,7 @@ const anotherToadIm = anotherToad;
             <button onClick={()=>updateImage(setBottomImageIndex,bottomImageIndex,-1,BSSize)} className="text-4xl hover:text-red-500 transition hover:scale-125">
               <Image src={arrowIm} alt="Left Arrow" className="w-15 md:w-10 md:h-10 h-12 transform rotate-180"/>
             </button>
-            <Image src={rockyIm} alt="Rocky Icon" className="md:w-15 md:h-10 w-18 h-12 hover:rotate-x-180"/>
+            <Image src={rockyIm} alt="Rocky Icon" className="md:w-15 md:h-10 w-18 h-12 hover:scale-110"/>
             <button onClick={()=>updateImage(setBottomImageIndex,bottomImageIndex,1,BSSize)} className="text-4xl hover:text-red-500 transition hover:scale-125">
                 <Image src={arrowIm} alt="Right Arrow" className="w-15 md:w-10 md:h-10 h-12"/>
               
@@ -164,8 +156,8 @@ const anotherToadIm = anotherToad;
         </div>
         <div className="w-full md:w-1/2 p-4 md:p-27">
           <p className="text:lg md:text-3xl text-center text-emerald-300 [text-shadow:5px_5px_#000000,_-4px_-4px_#000000,_5px_-5px_#000000,_-5px_5px_#000000]">
-            Beyond making software, I am a fan of my national football team and for Real Madrid CF since I have memories and try to watch every game possible that I can.
-            I also enjoy watching speedrunning videos of different games, and watch any anime when I can. I love listerning to music too and my favorite artist is Canserbero. Also if you can already tell, Toad is my favorite character ever.
+            Beyond making software, I am a fan of my national football team and for Real Madrid CF and try to watch every game possible that I can.
+            I also enjoy watching speedrunning videos of different games, and watch any anime when I can. Also if you can already tell, Toad is my favorite character ever.
           </p>
         </div>
       </div>

@@ -83,10 +83,8 @@ const toad = 'https://placehold.co/100x100/000000/FFFFFF?text=Toad';
                           style={{backgroundImage: 'url(/StarTile_SpaceJam.png)',backgroundAttachment: 'fixed', backgroundSize:'115% 115%', imageRendering: 'pixelated'}} >
          
           <header className="flex justify-between items-center w-full mb-15"> 
-          
-          {/* Buttons on the right, spaced using NavButtons' space-x-4 */}
           <NavButtons />
-          </header> {/* --- Main Content Section --- */} 
+          </header>
          
          <div className="flex flex-col space-y-20 mt-6 items-center justify-center">
           
@@ -112,16 +110,14 @@ const toad = 'https://placehold.co/100x100/000000/FFFFFF?text=Toad';
       Graphics Programming Knights
     </span>
 
-    {/* DESCRIPTION: REMOVE whitespace-nowrap so text wraps on phones */}
     <div className="text-white text-sm md:text-lg space-y-2 leading-relaxed">
       <p>I help create collaborations with other clubs on campus for different events.</p>
       <p>During this time, I aided in setup for a Render Jam in October 2025.</p>
       <p>I also work on workshops relating to mathematics necessary or on different game engines such as Unity.</p>
-      <p className="font-bold">As one of the founders, it is my duty to ensure a growing and safe community.</p>
+      <p>As one of the founders, it is my duty to ensure a growing and safe community.</p>
     </div>
   </div>
 
-  {/* LOGO: Center on mobile, right-align on desktop */}
   <Image 
     src={gpkLogo} 
     alt="GPK Logo" 
@@ -143,7 +139,7 @@ const toad = 'https://placehold.co/100x100/000000/FFFFFF?text=Toad';
       leading-tight md:leading-none mb-2
       [text-shadow:3px_3px_#000] md:[text-shadow:5px_5px_#000000,_-4px_-4px_#000000,_5px_-5px_#000000,_-5px_5px_#000000]
     ">
-      Mentee
+      Operations Member
     </span>
 
     <span className="text-white text-xl md:text-3xl mb-4 [text-shadow:2px_2px_#000] md:[text-shadow:2px_2px_#000000,_-2px_-2px_#000000,_3px_-3px_#000000,_-3px_3px_#000000]">
@@ -151,15 +147,14 @@ const toad = 'https://placehold.co/100x100/000000/FFFFFF?text=Toad';
     </span>
 
     {/* DESCRIPTION: REMOVE whitespace-nowrap so text wraps on phones */}
-    <div className="text-white text-sm md:text-lg space-y-2 leading-relaxed">
-      <p>I help create collaborations with other clubs on campus for different events.</p>
-      <p>During this time, I aided in setup for a Render Jam in October 2025.</p>
-      <p>I also work on workshops relating to mathematics necessary or on different game engines such as Unity.</p>
-      <p className="font-bold">As one of the founders, it is my duty to ensure a growing and safe community.</p>
+    <div className="text-white text-sm md:text-lg space-y-4 leading-relaxed">
+      <p>Strengthened systems programming abilities by exploring emulation and low-level development techniques.</p>
+      <p>Completed 5 technical workshops in ML, Game Development, and Systems, applying learned concepts in Talk to
+the Hand’s model and AstroDog’s physics, improving technical proficiency in Python, C++, and C#.</p>
+      
     </div>
   </div>
 
-  {/* LOGO: Center on mobile, right-align on desktop */}
   <Image 
     src={khLogo} 
     alt="kh Logo" 
@@ -191,26 +186,21 @@ const toad = 'https://placehold.co/100x100/000000/FFFFFF?text=Toad';
       Hispanic Heritage Scholarship Fund
     </span>
 
-    {/* DESCRIPTION: REMOVE whitespace-nowrap so text wraps on phones */}
-    <div className="text-white text-sm md:text-lg space-y-2 leading-relaxed">
-      <p>I help create collaborations with other clubs on campus for different events.</p>
-      <p>During this time, I aided in setup for a Render Jam in October 2025.</p>
-      <p>I also work on workshops relating to mathematics necessary or on different game engines such as Unity.</p>
-      <p className="font-bold">As one of the founders, it is my duty to ensure a growing and safe community.</p>
+    <div className="text-white text-sm md:text-lg space-y-5 leading-relaxed">
+      <p>I am one of the 50 selected to represent this non-profit representing Hispanic students in Central Florida.</p>
+      <p>Attend workshops and events learning leadership skills and improve the community.</p>
+
+      
     </div>
   </div>
 
-  {/* LOGO: Center on mobile, right-align on desktop */}
   <Image 
     src={hhsfLogo} 
     alt="hhsf Logo" 
     className="w-32 h-32 md:w-70 md:h-70 bg-white self-center md:justify-right items-right" 
   /> 
 </a>
-        
-       
-                        <span className="md:text-6xl text-4xl text-center md:[text-shadow:5px_5px_#000000,_-4px_-4px_#000000,_5px_-5px_#000000,_-5px_5px_#000000]">Awesome pictures of my experiences!! </span>
-
+        <span className="md:text-6xl text-4xl text-center md:[text-shadow:5px_5px_#000000,_-4px_-4px_#000000,_5px_-5px_#000000,_-5px_5px_#000000]">Awesome pictures of my experiences!! </span>
             <div className=" w-75 h-65 md:w-130 md:h-90 overflow-hidden flex items-center justify-center md:mb-4 md:-mt-7">
                    <Image 
                      src={currentTopImage.src} 
@@ -223,7 +213,7 @@ const toad = 'https://placehold.co/100x100/000000/FFFFFF?text=Toad';
                    <button onClick={()=>updateImage(setTopImageIndex,topImageIndex,-1,aleListSize)} className="text-4xl hover:text-red-500 transition hover:scale-125">
                      <Image src={arrowIm} alt="Left Arrow" className="w-10 h-10 md:w-15 md:h-15 transform rotate-180"/>
                    </button>
-                   <Image src={rockyIm} alt="Rocky Icon" className="w-15 h-10 md:w-20 md:h-15 hover:rotate-x-180"/>
+                   <Image src={rockyIm} alt="Rocky Icon" className="w-15 h-10 md:w-20 md:h-15 hover:scale-110" />
                    <button onClick={()=>updateImage(setTopImageIndex,topImageIndex,1,aleListSize)} className="text-4xl hover:text-red-500 transition hover:scale-125">
                        <Image src={arrowIm} alt="Right Arrow" className="w-10 h-10 md:w-15 md:h-15"/>
                      

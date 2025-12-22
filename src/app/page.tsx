@@ -1,4 +1,5 @@
-
+'use client';
+import dynamic from 'next/dynamic';
 import Image from "next/image";
 import Link from "next/link";
 import localFont from 'next/font/local'
@@ -15,7 +16,10 @@ export const anotherMarioFont = localFont({
   src:'./mario-party-hudson/dicecondesedlight.ttf',
   variable: '--font-anotherMario'
 });
-
+const Character = dynamic(() => import('./components/Alejandro'), { 
+  ssr: false, 
+  loading: () => <div className="w-full h-[300px]" />
+});
  const alejandro = alejandroMP;
  const GithubLogo = github;
   const resumeIm = resume 
@@ -76,8 +80,12 @@ export const anotherMarioFont = localFont({
 
     </div> 
      ); 
+     
+
      export default function App(){ 
+      
       return (
+        
          <div className={`min-h-screen font-sans p-8 ${anotherMarioFont.className} bg-cover bg-gray-900 no-scrollbar`}
                           style={{backgroundImage: 'url(/StarTile_SpaceJam.png)',backgroundAttachment: 'fixed', backgroundSize:'115% 115%', imageRendering: 'pixelated'}} >
           <header className="flex justify-between items-center w-full mb-15"> 
@@ -88,9 +96,9 @@ export const anotherMarioFont = localFont({
          <ProfileSection /> 
             </div> 
          <div className="w-full md:w-1/3 flex justify-center md:justify-start mt-8 md:mt-0">
-         <div className="w-52 h-53 md:w-62 md:h-63 rounded-full shadow-lg border-0.01 overflow-hidden flex justify-center items-center float">
+         <div className="w-52 h-53 md:w-62 md:h-63 rounded-full shadow-lg border-0.01 overflow-hidden flex justify-center items-center float hover:scale-110">
           <Image src={alejandroMP} alt="Profile Placeholder" 
-          className="w-70 h-55 md:w-85 md:h-70 object-cover overflow-hidden hover:rotate-z-45" />
+          className="w-70 h-55 loading='eager' md:w-85 md:h-70 object-cover overflow-hidden hover:scale-100" />
          </div>
            </div>
    </main> 
@@ -106,4 +114,7 @@ export const anotherMarioFont = localFont({
           <a href="https://www.linkedin.com/in/alejandro-jaimes-coco/" target="_blank" rel="noopener noreferrer" 
           className="md:opacity-75 hover:opacity-100 transition flex items-center md:space-x-3  px-2 md:px-4 md:w-40 md:h-15 w-20 h-10 bg-blue-500">
            <span className=" text-sky-100 md:text-2xl text-xs">LinkedIn</span> <Image src={LinkLogo} alt="LinkedIn Logo" className="md:w-35 md:h-15 w-10 h-10 scale-100 bg-blue-500"  /> 
-       </a> </div>    </div>   ); }
+       </a> </div>
+      <div className='loading="eager" items-center'>
+      <Character /></div>
+        </div>      ); }
