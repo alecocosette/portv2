@@ -47,12 +47,10 @@ function MakeModel(){
         const [opacity, setOpacity] = useState(0);
         
         useEffect(() => {
-          // Trigger fade in once the component is mounted on the client
           setOpacity(1);
         }, []);
   return (
     
-    // CRITICAL: We use a wrapper with an explicit min-height and overflow visible
     <div 
       className="w-full relative transition-opacity duration-1500 ease-in-out" 
       style={{ 
@@ -61,12 +59,11 @@ function MakeModel(){
         opacity: opacity 
       }}
     >
-      <Suspense fallback={<div className="text-white text-center">Loading Alejandro...</div>}>
+      <Suspense fallback={<div className="text-white text-center justify-center">Loading Alejandro...</div>}>
         <Canvas 
           key="stable-canvas"
           dpr={[1,1.5]} 
           shadows
-          // Use gl prop to ensure the alpha channel doesn't cause transparency issues
           gl={{ antialias: true, alpha: true }}
           camera={{ position: [0, 1, 8], fov: 25 }}
           style={{ height: '100%', width: '100%' }}
