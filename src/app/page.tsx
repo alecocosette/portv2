@@ -7,7 +7,7 @@ import alejandroMP from './alemp.png';
 import resume from './resume.png';
 import linkedin from './linkedin.webp';
 import github from './github.png';
-
+//test
 export const marioFont = localFont({
   src: './mario-party-hudson/Mario-Party-Hudson-Font.ttf',
   variable: '--font-mario'
@@ -111,6 +111,7 @@ const Character = dynamic(() => import('./components/Alejandro'), {
           className="md:opacity-75 hover:opacity-100 transition flex items-center md:space-x-4  px-2 md:px-4 md:w-40 md:h-15 w-20 h-10 bg-gray-400">
            <span className=" text-white md:text-2xl text-xs ">Resume</span> <Image src={resumeIm} alt="Reumse Logo" className="md:w-35 md:h-15 w-10 h-8  md:px-1 bg-gray-400 p-1"  /> 
        </a>
+       /
           <a href="https://www.linkedin.com/in/alejandro-jaimes-coco/" target="_blank" rel="noopener noreferrer" 
           className="md:opacity-75 hover:opacity-100 transition flex items-center md:space-x-3  px-2 md:px-4 md:w-40 md:h-15 w-20 h-10 bg-blue-500">
            <span className=" text-sky-100 md:text-2xl text-xs">LinkedIn</span> <Image src={LinkLogo} alt="LinkedIn Logo" className="md:w-35 md:h-15 w-10 h-10 scale-100 bg-blue-500"  /> 
