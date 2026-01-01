@@ -210,7 +210,8 @@ const arrowIm = arrow;
    </main> 
    <div className="flex flex-col items-center space-y-0 text-white text-right"> 
     <h2 className={`
-      text-[30px] 
+      md:text-[30px]
+      text-[20px]  
       font-extrabold 
       font-mario 
       leading-none 
