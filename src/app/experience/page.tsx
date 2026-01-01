@@ -2,16 +2,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import localFont from 'next/font/local'
-import alejandroMP from '../alemp.png';
-import resume from '../resume.png';
-import linkedin from '../linkedin.webp';
-import github from '../github.png';
 import gpk from '../gpknow.png';
-import ucf from '../UCF.png';
 import kh from '../KH2025Small.svg';
 import hhsf from '../hhsf.png';
-import arrow from '../arrow.webp';
-import anotherToad from '../ToadIcon_MarioPartyDS.png'
+import arrow from '../arrownew.png';
 import rockyAsset from '../rockyAsset-removebg-preview.png'
 import exp1 from '../experience1.jpg';
 import exp2 from '../experience2.png';
@@ -31,22 +25,14 @@ export const anotherMarioFont = localFont({
 const expImage = gpkexp;
 const rockyIm = rockyAsset;
 const arrowIm = arrow;
-const anotherToadIm = anotherToad;
 const gpkLogo = gpk;
-const toad = 'https://placehold.co/100x100/000000/FFFFFF?text=Toad';
- const alejandro = alejandroMP;
- const GithubLogo = github;
- const ucfLogo = ucf;
   const khLogo = kh;
   const hhsfLogo = hhsf;
-  const resumeIm = resume 
-  const LinkLogo = linkedin;
   const ex1 = exp1;
   const ex2 = exp2;
   const ex3 = exp3;
   const ex4 = exp4;
   const ex5 = exp5;
-   const capymonkey = 'https://placehold.co/400x250/000000/FFFFFF?text=Video+Content+Placeholder';
    const aleImageList = [{src: ex1, alt: "me"}, {src: ex2, alt:""}, {src: ex3, alt:""}, {src: ex4, alt: ""}, {src: ex5, alt: ""}, {src: expImage, alt: "GPK Event"}];
    const aleListSize = aleImageList.length;
     const NavButtons = () => ( 

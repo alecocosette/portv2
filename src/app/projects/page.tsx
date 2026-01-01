@@ -7,7 +7,7 @@ import resume from '../resume.png';
 import linkedin from '../linkedin.webp';
 import github from '../github.png';
 import { useState } from "react";
-import arrow from '../arrow.webp';
+import arrow from '../arrownew.png';
 import anotherToad from '../ToadIcon_MarioPartyDS.png'
 import rockyAsset from '../rockyAsset-removebg-preview.png'
 import proj1 from '../proj1.jpg';
@@ -16,7 +16,8 @@ import proj3 from '../proj3.jpg';
 import proj4 from '../proj4.jpg';
 import proj5 from '../proj5.jpg';
 import proj6 from '../proj6.jpg';
-import noimage from '../noimage.png';
+import noimage from '../snes.png';
+
 import talktothehand from '../talktothehand.png';
 import nextstep from '../nextstep.jpg';
 import astrodog from '../astrodog.png';
@@ -42,13 +43,6 @@ const project5 = proj5;
 const project6 = proj6;
 const rockyIm = rockyAsset;
 const arrowIm = arrow;
-const anotherToadIm = anotherToad;
-const toad = 'https://placehold.co/100x100/000000/FFFFFF?text=Toad';
- const alejandro = alejandroMP;
- const GithubLogo = github;
-  const resumeIm = resume 
-  const LinkLogo = linkedin;
-   const capymonkey = 'https://placehold.co/400x250/000000/FFFFFF?text=Video+Content+Placeholder';
    const aleImageList = [{src: project2, alt: "me"}, {src: project3, alt:""}, {src: project6, alt:""}, {src: project4, alt: ""}, {src: project1, alt: ""}, {src: project5, alt: ""}];
    const aleListSize = aleImageList.length;
     const NavButtons = () => ( 
@@ -90,8 +84,8 @@ const toad = 'https://placehold.co/100x100/000000/FFFFFF?text=Toad';
           
                     <div className="flex flex-col md:flex-row md:space-x-25 md:mt-6 items-center justify-center">
             
-            <a href="" target="_blank" rel="noopener noreferrer" 
-            className="opacity-100 hover:opacity-100 transition flex flex-col items-start space-x-4 w-70 h-75 bg-gray-400 md:mb-0 mb-6">
+            <a href="https://github.com/alecocosette/sFun" target="_blank" rel="noopener noreferrer" 
+            className="md:opacity-85 opacity-100 hover:opacity-100 hover:scale-105 transition flex flex-col items-start space-x-4 w-70 h-75 bg-gray-400 md:mb-0 mb-6">
             <Image src={noImage} alt="sFun Logo" className="w-70 h-35 bg-black "  /> <span className=" text-white md:text-xl text-lg items-start px-2 [text-shadow:2px_2px_#000000,_-2px_-2px_#000000,_2px_-2px_#000000,_-2px_2px_#000000]">sFun (Dec 2025-Present)</span>  
         <span className=" text-white md:text-base items-start py-2 px-2">SNES Emulator, more details coming</span> 
             <span className=" text-white md:text-base items-start px-2">Technologies: C++, SDL2</span>

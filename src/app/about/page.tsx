@@ -4,11 +4,9 @@ import React from "react";
 import Link from "next/link";
 import localFont from 'next/font/local'
 import { useState } from "react";
-import alejandroMP from '../alemp.png';
-import resume from '../resume.png';
 import linkedin from '../linkedin.webp';
 import github from '../github.png';
-import arrow from '../arrow.webp';
+import arrow from '../arrownew.png';
 import ale1 from '../IMG_0924.jpg';
 import ale2 from '../IMG_0925.jpg';
 import ale3 from '../IMG_0926.jpg';
@@ -61,9 +59,7 @@ const community4Im = community4;
 const community5Im = community5;
 const community6Im = community6;
 const arrowIm = arrow;
- const alejandro = alejandroMP;
  const GithubLogo = github;
-  const resumeIm = resume 
   const LinkLogo = linkedin;
    const aleImageList = [{src:ale10Im, alt:""},{src:ale7Im, alt:""},{src: ale1Im, alt: "me"}, {src: ale2Im, alt:""}, {src: ale3Im, alt:""}, {src: ale4Im, alt: ""},{src: ale5Im, alt: ""}];
    const aleListSize = aleImageList.length;
