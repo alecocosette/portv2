@@ -122,7 +122,7 @@ const gpkLogo = gpk;
       leading-tight md:leading-none mb-2
       [text-shadow:3px_3px_#000] md:[text-shadow:5px_5px_#000000,_-4px_-4px_#000000,_5px_-5px_#000000,_-5px_5px_#000000]
     ">
-      Operations Member
+      Software Engineer Mentee
     </span>
 
     <span className="text-white text-xl md:text-3xl mb-4 [text-shadow:2px_2px_#000] md:[text-shadow:2px_2px_#000000,_-2px_-2px_#000000,_3px_-3px_#000000,_-3px_3px_#000000]">
@@ -131,9 +131,10 @@ const gpkLogo = gpk;
 
     {/* DESCRIPTION: REMOVE whitespace-nowrap so text wraps on phones */}
     <div className="text-white text-sm md:text-lg space-y-4 leading-relaxed">
-      <p>Strengthened systems programming abilities by exploring emulation and low-level development techniques.</p>
-      <p>Completed 5 technical workshops in ML, Game Development, and Systems, applying learned concepts in Talk to
-the Hand’s model and AstroDog’s physics, improving technical proficiency in Python, C++, and C#.</p>
+      <p>Currently developing skills in low level systems for my emulator project.</p>
+      <p>I attend multiple workshops improving my coding abilities and learning about how the world moves.</p>
+      <p>I improve my soft skills through leadership and collaboration and mentorship.</p>
+
       
     </div>
   </div>
