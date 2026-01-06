@@ -7,11 +7,7 @@ import alejandroMP from './alemp.png';
 import resume from './resume.png';
 import linkedin from './linkedin.webp';
 import github from './github.png';
-//test
-export const marioFont = localFont({
-  src: './mario-party-hudson/Mario-Party-Hudson-Font.ttf',
-  variable: '--font-mario'
-})
+
 export const anotherMarioFont = localFont({
   src:'./mario-party-hudson/dicecondesedlight.ttf',
   variable: '--font-anotherMario'
