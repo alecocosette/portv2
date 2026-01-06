@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Alejandro Jaimes",
-  description: "",
+  description: "Portfolio of Alejandro Jaimes",
 };
 
 export default function RootLayout({
