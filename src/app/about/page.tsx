@@ -234,7 +234,7 @@ const arrowIm = arrow;
                   <div className="flex space-x-20 mt-6 justify-center">
           
           <a href="https://www.github.com/alecocosette" target="_blank" rel="noopener noreferrer" 
-          className="md:opacity-75 hover:opacity-100 transition flex items-center space-x-4  px-4 w-40 h-15 bg-black">
+          className="md:opacity-75 hover:opacity-100 transition flex items-center space-x-3  px-4 w-40 h-15 bg-black">
            <span className=" text-white text-lg md:text-2xl">GitHub</span> <Image src={GithubLogo} alt="Github Logo" className="w-35 h-15 bg-black  p-1"  /> 
        </a>
           <a href="https://www.linkedin.com/in/alejandro-jaimes-coco/" target="_blank" rel="noopener noreferrer" 
