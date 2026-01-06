@@ -14,10 +14,7 @@ import exp4 from '../experience4.jpg';
 import exp5 from '../experience5.jpg';
 import { useState } from "react";
 import gpkexp from '../gpkexp.jpg';
-export const marioFont = localFont({
-  src: '../mario-party-hudson/Mario-Party-Hudson-Font.ttf',
-  variable: '--font-mario'
-})
+
 export const anotherMarioFont = localFont({
   src:'../mario-party-hudson/dicecondesedlight.ttf',
   variable: '--font-anotherMario'

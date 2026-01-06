@@ -22,10 +22,7 @@ import talktothehand from '../talktothehand.png';
 import nextstep from '../nextstep.jpg';
 import astrodog from '../astrodog.png';
 import trickytreats from '../Screenshot 2025-12-22 010921.png';
-export const marioFont = localFont({
-  src: '../mario-party-hudson/Mario-Party-Hudson-Font.ttf',
-  variable: '--font-mario'
-})
+
 export const anotherMarioFont = localFont({
   src:'../mario-party-hudson/dicecondesedlight.ttf',
   variable: '--font-anotherMario'

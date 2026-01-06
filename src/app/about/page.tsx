@@ -28,10 +28,7 @@ import community3 from '../community1 (3).jpg';
 import community4 from '../IMG_1094.jpg';
 import community5 from '../IMG_1095.jpg';
 import community6 from '../zuliafc.jpg';
-export const marioFont = localFont({
-  src: '../mario-party-hudson/Mario-Party-Hudson-Font.ttf',
-  variable: '--font-mario'
-})
+
 export const anotherMarioFont = localFont({
   src:'../mario-party-hudson/dicecondesedlight.ttf',
   variable: '--font-anotherMario'
