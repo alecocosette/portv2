@@ -231,7 +231,7 @@ const arrowIm = arrow;
       Always down to connect!
      </h2>
     </div> 
-                  <div className="flex space-x-20 mt-6 items-right justify-center">
+                  <div className="flex space-x-20 mt-6 justify-center">
           
           <a href="https://www.github.com/alecocosette" target="_blank" rel="noopener noreferrer" 
           className="md:opacity-75 hover:opacity-100 transition flex items-center space-x-4  px-4 w-40 h-15 bg-black">
