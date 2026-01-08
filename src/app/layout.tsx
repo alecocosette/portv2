@@ -16,7 +16,12 @@ export const metadata: Metadata = {
   title: "Alejandro Jaimes",
   description: "Portfolio of Alejandro Jaimes",
 };
-
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1, // This prevents user-pinching/zooming on mobile
+  userScalable: false,
+};
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -24,7 +29,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      
       <body suppressHydrationWarning={true}
         className={`${geistSans.variable} ${geistMono.variable} antialiased `}
       >

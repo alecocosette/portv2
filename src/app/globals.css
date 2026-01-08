@@ -48,6 +48,17 @@ body {
   50% { transform: translatey(-7px); }
   100% { transform: translatey(0px); }
 }
+:root {
+  /* 1rem will now be exactly 1% of the screen width */
+  /* This value ignores browser zoom level completely */
+  font-size: 1vw; 
+}
+
+@media (max-width: 768px) {
+  :root {
+    font-size: 2.5vw; /* Adjusts for mobile so it's not too tiny */
+  }
+}
 .float {
   animation: float 2s ease-in-out infinite;
 }
