@@ -15,7 +15,7 @@ export const anotherMarioFont = localFont({
 });
 const Character = dynamic(() => import('./components/Alejandro'), { 
   ssr: false, 
-  loading: () => <div className="w-full h-[300px]" />
+  loading: () => <div className="w-full h-full" />
 });
  const alejandro = alejandroMP;
  const GithubLogo = github;
