@@ -93,7 +93,7 @@ const Character = dynamic(() => import('./components/Alejandro'), {
     {/* This container will now stay perfectly centered because the parent is a flex-center */}
     <div className="flex flex-col items-center justify-between w-full h-full">
       
-<header className="flex justify-center w-full md:mb-8">
+<header className="flex justify-center w-full mb-8">
           <NavButtons />
       </header>
 
@@ -112,17 +112,17 @@ const Character = dynamic(() => import('./components/Alejandro'), {
       </main>
          <div className="flex space-x-10 md:space-x-20 mt-6 md:items-right justify-center">  
           <a href="https://www.github.com/alecocosette" target="_blank" rel="noopener noreferrer" 
-          className="md:opacity-75 hover:opacity-100 transition flex items-center md:space-x-4 px-2 md:px-4 md:w-40 md:h-15 w-20 h-10 bg-black">
-           <span className=" text-white md:text-2xl text-xs">GitHub</span> <Image src={GithubLogo} alt="Github Logo" className="md:w-35 md:h-15 w-10 h-10 bg-black  p-1"  /> 
+          className="md:opacity-75 hover:opacity-100 transition flex items-center md:space-x-4 px-3 md:px-4 md:w-40 md:h-15 w-25 h-15 bg-black">
+           <span className=" text-white md:text-2xl text-sm">GitHub</span> <Image src={GithubLogo} alt="Github Logo" className="md:w-35 md:h-15 w-15 h-15 bg-black  p-1"  /> 
        </a>
             <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" 
-          className="md:opacity-75 hover:opacity-100 transition flex items-center md:space-x-4  px-2 md:px-4 md:w-40 md:h-15 w-20 h-10 bg-gray-400">
-           <span className=" text-white md:text-2xl text-xs ">Resume</span> <Image src={resumeIm} alt="Reumse Logo" className="md:w-35 md:h-15 w-10 h-8  md:px-1 bg-gray-400 p-1"  /> 
+          className="md:opacity-75 hover:opacity-100 transition flex items-center md:space-x-4 px-3 md:px-4 md:w-40 md:h-15 w-25 h-15 bg-gray-400">
+           <span className=" text-white md:text-2xl text-sm ">Resume</span> <Image src={resumeIm} alt="Resume Logo" className="md:w-35 md:h-15 w-11 h-11  md:px-1 bg-gray-400 p-1"  /> 
        </a>
        
           <a href="https://www.linkedin.com/in/alejandro-jaimes-coco/" target="_blank" rel="noopener noreferrer" 
-          className="md:opacity-75 hover:opacity-100 transition flex items-center md:space-x-3  px-2 md:px-4 md:w-40 md:h-15 w-20 h-10 bg-blue-500">
-           <span className=" text-sky-100 md:text-2xl text-xs">LinkedIn</span> <Image src={LinkLogo} alt="LinkedIn Logo" className="md:w-35 md:h-15 w-10 h-10 scale-100 bg-blue-500"  /> 
+          className="md:opacity-75 hover:opacity-100 transition flex items-center md:space-x-3  px-3 md:px-4 md:w-40 md:h-15 w-25 h-15 bg-blue-500">
+           <span className=" text-sky-100 md:text-2xl text-sm">LinkedIn</span> <Image src={LinkLogo} alt="LinkedIn Logo" className="md:w-35 md:h-15 w-15 h-15 scale-100 bg-blue-500"  /> 
        </a> </div>
       <div className='loading="eager" items-center w-[30rem] h-[30rem]'>
       <Character /></div>
