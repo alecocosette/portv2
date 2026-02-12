@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import localFont from 'next/font/local'
 import gpk from '../gpknow.png';
-import kh from '../KH2025Small.svg';
+import kh from '../knighthackpic.jpg';
 import hhsf from '../hhsf.png';
 import arrow from '../arrownew.png';
 import rockyAsset from '../rockyAsset-removebg-preview.png'
@@ -75,7 +75,7 @@ const gpkLogo = gpk;
     
      flex flex-col-reverse md:flex-row items-center md:items-start 
      w-[95vw] md:w-full md:max-w-6xl h-auto md:h-80 md:opacity-75 hover:opacity-100
-     bg-purple-500 
+     bg-cyan-600
      transition hover:scale-105 p-4 md:px-4 md:py-6
    "
 >
@@ -111,7 +111,7 @@ const gpkLogo = gpk;
     
      flex flex-col-reverse md:flex-row  md:items-start 
      w-[95vw] md:w-full md:max-w-6xl h-auto md:h-80 md:opacity-75 hover:opacity-100
-     bg-red-600 
+     bg-[#a927b8]
      transition hover:scale-105 p-4 md:px-4 md:py-6
    "
 >
@@ -121,7 +121,7 @@ const gpkLogo = gpk;
       leading-tight md:leading-none mb-2
       [text-shadow:3px_3px_#000] md:[text-shadow:5px_5px_#000000,_-4px_-4px_#000000,_5px_-5px_#000000,_-5px_5px_#000000]
     ">
-      Software Engineer Mentee
+      Outreach Team Member
     </span>
 
     <span className="text-white text-xl md:text-3xl mb-4 [text-shadow:2px_2px_#000] md:[text-shadow:2px_2px_#000000,_-2px_-2px_#000000,_3px_-3px_#000000,_-3px_3px_#000000]">
@@ -130,9 +130,9 @@ const gpkLogo = gpk;
 
     {/* DESCRIPTION: REMOVE whitespace-nowrap so text wraps on phones */}
     <div className="text-white text-sm md:text-lg space-y-4 leading-relaxed">
-      <p>Currently developing skills in low level systems for my emulator project.</p>
-      <p>I attend multiple workshops improving my coding abilities and learning about how the world moves.</p>
-      <p>I improve my soft skills through leadership and collaboration and mentorship.</p>
+      <p>I coordinate campus engagement for our hackathon and technical events. I represent the organization at university events, speak with students about joining project teams, and onboard new members into our development community.</p>
+      <p>I also assist in planning workshops and recruitment campaigns, organize communication across social media and Discord.</p>
+      <p>I help grow participation and lower the barrier to entry for students who have never contributed to projects before.</p>
 
       
     </div>
