@@ -75,7 +75,7 @@ const gpkLogo = gpk;
     
      flex flex-col-reverse md:flex-row items-center md:items-start 
      w-[95vw] md:w-full md:max-w-6xl h-auto md:h-80 md:opacity-75 hover:opacity-100
-     bg-cyan-600
+     bg-red-900
      transition hover:scale-105 p-4 md:px-4 md:py-6
    "
 >
