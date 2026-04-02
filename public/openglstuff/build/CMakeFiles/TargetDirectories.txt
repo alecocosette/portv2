@@ -1,3 +1,0 @@
-C:/Users/yeims/cs1/openglstuff/build/CMakeFiles/openglstuff.dir
-C:/Users/yeims/cs1/openglstuff/build/CMakeFiles/edit_cache.dir
-C:/Users/yeims/cs1/openglstuff/build/CMakeFiles/rebuild_cache.dir

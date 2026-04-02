@@ -1,3 +1,0 @@
-C:/dev/newfold/public/openglstuff/cmake-build-debug/CMakeFiles/openglstuff.dir
-C:/dev/newfold/public/openglstuff/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/dev/newfold/public/openglstuff/cmake-build-debug/CMakeFiles/rebuild_cache.dir
