@@ -22,6 +22,7 @@ import talktothehand from '../talktothehand.png';
 import nextstep from '../nextstep.jpg';
 import astrodog from '../astrodog.png';
 import trickytreats from '../Screenshot 2025-12-22 010921.png';
+import StarBackground from "../components/StarBackground";
 
 export const anotherMarioFont = localFont({
   src:'../mario-party-hudson/dicecondesedlight.ttf',
@@ -69,9 +70,8 @@ const arrowIm = arrow;
                             const currentTopImage = aleImageList[topImageIndex];
       return (
         
-         <div className={`min-h-screen font-sans p-8 ${anotherMarioFont.className} bg-cover bg-gray-900 no-scrollbar`}
-                                   style={{backgroundImage: 'url(/StarTile_SpaceJam.png)',backgroundAttachment: 'fixed', backgroundSize:'115% 115%', imageRendering: 'pixelated'}} >
-         
+         <div className={`relative min-h-screen font-sans p-8 ${anotherMarioFont.className} w-full flex flex-col items-center`}>
+                   <StarBackground/>
           <header className="flex justify-between items-center w-full mb-15"> 
           
           <NavButtons />

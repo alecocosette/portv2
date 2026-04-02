@@ -1,5 +1,4 @@
 'use client';
-import { useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import Image from "next/image";
 import Link from "next/link";
@@ -16,6 +15,10 @@ export const anotherMarioFont = localFont({
 const Character = dynamic(() => import('./components/Alejandro'), { 
   ssr: false, 
   loading: () => <div className="w-full h-[300px]" />
+});
+const StarBackground = dynamic(() => import('./components/StarBackground'), { 
+  ssr: false, 
+  loading: () => <div className="fixed inset-0 w-full h-full bg-black" />
 });
  const alejandro = alejandroMP;
  const GithubLogo = github;
@@ -84,13 +87,11 @@ const Character = dynamic(() => import('./components/Alejandro'), {
         
         <div className={`fixed inset-0 font-sans p-8 ${anotherMarioFont.className} w-full h-full overflow-hidden flex flex-col items-center justify-center bg-black`}
        style={{
-         backgroundImage: 'url(/StarTile_SpaceJam.png)',
-         backgroundSize: 'cover',
-         backgroundPosition: 'center',
-         imageRendering: 'pixelated'
+         
        }}>
     
     {/* This container will now stay perfectly centered because the parent is a flex-center */}
+    <StarBackground />
     <div className="flex flex-col items-center justify-between w-full h-full">
       
 <header className="flex justify-center w-full mb-8">
@@ -98,7 +99,6 @@ const Character = dynamic(() => import('./components/Alejandro'), {
       </header>
 
       <main className="flex flex-col md:flex-row items-center justify-center space-x-0 md:space-x-[10rem] md:mt-8">
-         {/* Use scale here for the 'pop' look */}
           <ProfileSection />
         
         

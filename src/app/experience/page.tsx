@@ -14,6 +14,7 @@ import exp4 from '../experience4.jpg';
 import exp5 from '../experience5.jpg';
 import { useState } from "react";
 import gpkexp from '../gpkexp.jpg';
+import StarBackground from "../components/StarBackground";
 
 export const anotherMarioFont = localFont({
   src:'../mario-party-hudson/dicecondesedlight.ttf',
@@ -61,12 +62,13 @@ const gpkLogo = gpk;
                       const currentTopImage = aleImageList[topImageIndex];
 
       return (
-                  <div className={`min-h-screen font-sans p-8 ${anotherMarioFont.className} bg-cover bg-gray-900 no-scrollbar`}
-                          style={{backgroundImage: 'url(/StarTile_SpaceJam.png)',backgroundAttachment: 'fixed', backgroundSize:'115% 115%', imageRendering: 'pixelated'}} >
-         
+        
+                  <div className={`relative min-h-screen font-sans p-8 ${anotherMarioFont.className} w-full flex flex-col items-center`}>
+          <StarBackground/>
           <header className="flex justify-between items-center w-full mb-15"> 
           <NavButtons />
           </header>
+         
          
          <div className="flex flex-col space-y-20 mt-6 items-center justify-center">
           

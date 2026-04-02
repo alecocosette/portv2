@@ -28,6 +28,7 @@ import community3 from '../community1 (3).jpg';
 import community4 from '../IMG_1094.jpg';
 import community5 from '../IMG_1095.jpg';
 import community6 from '../zuliafc.jpg';
+import StarBackground from "../components/StarBackground";
 
 export const anotherMarioFont = localFont({
   src:'../mario-party-hudson/dicecondesedlight.ttf',
@@ -95,9 +96,8 @@ const arrowIm = arrow;
         const currentBottomImage = BSList[bottomImageIndex];
         const currentCommunityImage = communityList[communityImageIndex];
       return (
-         <div className={`min-h-screen font-sans p-8 ${anotherMarioFont.className} bg-cover bg-gray-900 no-scrollbar`}
-                 style={{backgroundImage: 'url(/StarTile_SpaceJam.png)',backgroundAttachment: 'fixed', backgroundSize:'115% 115%', imageRendering: 'pixelated'}} >
-         
+        <div className={`relative min-h-screen font-sans p-8 ${anotherMarioFont.className} w-full flex flex-col items-center`}>
+                  <StarBackground/>
           <header className="flex justify-between items-center w-full  "> 
           
           <NavButtons />
