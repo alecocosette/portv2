@@ -32,7 +32,7 @@ const fragmentShaderSource = `
     float starishere = hash(grid + timeSnapped);
     vec3 color = vec3(0.05, 0.05, 0.15); // Background dark blue
     vec3 finalColor = color;
-    if (starishere > 0.998) {
+    if (starishere > 0.9994) {
         float flicker = cos(myTime * speed) * 0.5 + 0.5;
         float pop = pow(flicker, 5.0);
         finalColor += vec3(1.0, 1.0, 1.0) * pop; 
