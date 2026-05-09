@@ -14,13 +14,53 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Alejandro Jaimes",
-  description: "Portfolio of Alejandro Jaimes",
+  
+  description: "President of Graphics Programming Knights, Outreach Member of Knight Hacks, UCF Student of Computer Science, and a Venezuelan in Tech",
+  keywords:[
+    "Alejandro Jaimes",
+    "C++",
+    "Knight Hacks",
+    "UCF",
+    "Graphics Programming Knights",
+    "Venezuela",
+    "Machine Learning",
+    "Computer Science",
+    "Game Development",
+    "Computer Vision",
+    "Computer Graphics",
+    "GPU Programming",
+    "Outreach",
+  ],
+  authors:[{
+    name: "Alejandro Jaimes"
+  }],
+  creator: "Alejandro Jaimes",
+  publisher: "Alejandro Jaimes",
+  icons: {
+        icon: "/favicon.ico",
+        shortcut: "/favicon.ico",
+        apple: "/favicon.ico",
+    },
+    openGraph: {
+        type: "website",
+        locale: "en_US",
+        url: "https://alejaimes.dev",
+        title: "About | Alejandro Jaimes",
+        description:
+            "President of Graphics Programming Knights, Outreach Member of Knight Hacks, UCF Student of Computer Science, and a Venezuelan in Tech",
+        siteName: "Alejandro Jaimes",
+        images: [
+            {
+                url: "/prop.jpg",
+                alt: "Alejandro Jaimes - Software Engineer",
+            },
+        ],
+    },
 };
 export const viewport = {
   width: 'device-width',
   initialScale: 1,
-  maximumScale: 1, // This prevents user-pinching/zooming on mobile
-  userScalable: false,
+  
 };
 export default function RootLayout({
   children,
