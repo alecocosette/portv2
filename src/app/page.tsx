@@ -103,9 +103,9 @@ const StarBackground = dynamic(() => import('./components/StarBackground'), {
         
         
         <div className="w-full md:w-1/3 flex justify-center md:justify-start mt-8 md:mt-0">
-         <div className="w-52 h-53 md:w-75 md:h-80 rounded-full shadow-lg border-0.01 overflow-hidden flex justify-center items-center float hover:scale-110">
-          <Image src={alejandroMP} alt="Profile Placeholder" 
-          className="w-70 h-55 loading='eager' md:w-85 md:h-90 object-cover overflow-hidden hover:scale-100" />
+         <div className="w-75 h-75 md:w-85 md:h-85 rounded-full shadow-lg border-0.01 overflow-hidden flex justify-center items-center float hover:scale-110">
+          <Image src="/check.png" alt="Profile Placeholder" width={400} height={400} priority
+          className="w-110 h-110 md:w-150 md:h-150 object-cover overflow-hidden hover:scale-100" />
          </div>
            </div>
 

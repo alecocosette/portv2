@@ -12,6 +12,11 @@ import exp2 from '../experience2.png';
 import exp3 from '../experience3.jpg';
 import exp4 from '../experience4.jpg';
 import exp5 from '../experience5.jpg';
+import mog from './mog.png';
+import outreachPic from './outreachPic.png';
+import aurafarm from './aurafarm.jpg';
+import reels from './reel.jpg';
+import thumbs from './thumbs.png';
 import { useState } from "react";
 import gpkexp from '../gpkexp.jpg';
 import StarBackground from "../components/StarBackground";
@@ -20,6 +25,8 @@ export const anotherMarioFont = localFont({
   src:'../mario-party-hudson/dicecondesedlight.ttf',
   variable: '--font-anotherMario'
 });
+const mogging = mog;
+const reelsIm = reels;
 const expImage = gpkexp;
 const rockyIm = rockyAsset;
 const arrowIm = arrow;
@@ -31,7 +38,10 @@ const gpkLogo = gpk;
   const ex3 = exp3;
   const ex4 = exp4;
   const ex5 = exp5;
-   const aleImageList = [{src: ex1, alt: "me"}, {src: ex2, alt:""}, {src: ex3, alt:""}, {src: ex4, alt: ""}, {src: ex5, alt: ""}, {src: expImage, alt: "GPK Event"}];
+  const outreachPicIm = outreachPic;
+  const aurafarmIm = aurafarm;
+  const thumbsIm = thumbs;
+   const aleImageList = [{src: outreachPicIm, alt:"Outreach Team Pictures"}, {src: ex1, alt: "Kickstart End"},  {src: ex3, alt:"Scholarship Received"}, {src: mogging, alt: "Mogging"}, {src: ex5, alt: "Scholarship Everybody"}, {src: expImage, alt: "KHVIII GPK Event"}, {src: aurafarmIm, alt: "Aurafarm Instagram"}, {src: thumbsIm, alt: "Alejandro Thumbs Up"}];
    const aleListSize = aleImageList.length;
     const NavButtons = () => ( 
    <div className= "grid grid-cols-2 md:flex md:justify-center md:items-center gap-15 w-full  md:px-0">
@@ -77,7 +87,7 @@ const gpkLogo = gpk;
     
      flex flex-col-reverse md:flex-row items-center md:items-start 
      w-[95vw] md:w-full md:max-w-6xl h-auto md:h-80 md:opacity-75 hover:opacity-100
-     bg-red-900
+     bg-red-900 rounded-2xl
      transition hover:scale-105 p-4 md:px-4 md:py-6
    "
 >
@@ -87,7 +97,7 @@ const gpkLogo = gpk;
       leading-tight md:leading-none mb-2
       [text-shadow:3px_3px_#000] md:[text-shadow:5px_5px_#000000,_-4px_-4px_#000000,_5px_-5px_#000000,_-5px_5px_#000000]
     ">
-      Vice President
+      President
     </span>
 
     <span className="text-white text-xl md:text-3xl mb-4 [text-shadow:2px_2px_#000] md:[text-shadow:2px_2px_#000000,_-2px_-2px_#000000,_3px_-3px_#000000,_-3px_3px_#000000]">
@@ -105,7 +115,7 @@ const gpkLogo = gpk;
   <Image 
     src={gpkLogo} 
     alt="GPK Logo" 
-    className="w-32 h-32 md:w-70 md:h-70 bg-purple-500 self-center md:justify-right items-right" 
+    className="w-32 h-32 rounded-2xl md:w-70 md:h-70 bg-purple-500 self-center md:justify-right items-right" 
   /> 
 </a>
 <a href="https://blade.knighthacks.org/" target="_blank" rel="noopener noreferrer" 
@@ -113,7 +123,7 @@ const gpkLogo = gpk;
     
      flex flex-col-reverse md:flex-row  md:items-start 
      w-[95vw] md:w-full md:max-w-6xl h-auto md:h-80 md:opacity-75 hover:opacity-100
-     bg-[#a927b8]
+     bg-[#a927b8] rounded-2xl
      transition hover:scale-105 p-4 md:px-4 md:py-6
    "
 >
@@ -143,7 +153,7 @@ const gpkLogo = gpk;
   <Image 
     src={khLogo} 
     alt="kh Logo" 
-    className="w-32 h-32 md:w-70 md:h-70 bg-black self-center md:justify-right items-right" 
+    className="w-32 h-32 rounded-2xl md:w-70 md:h-70 bg-black self-center md:justify-right items-right" 
   /> 
 </a>
 
@@ -154,7 +164,7 @@ const gpkLogo = gpk;
     
      flex flex-col-reverse md:flex-row items-center md:items-start 
      w-[95vw] md:w-full md:max-w-6xl h-auto md:h-80 md:opacity-75 hover:opacity-100
-     bg-blue-700
+     bg-blue-700 rounded-2xl
      transition hover:scale-105 p-4 md:px-4 md:py-6
    "
 >
@@ -182,16 +192,107 @@ const gpkLogo = gpk;
   <Image 
     src={hhsfLogo} 
     alt="hhsf Logo" 
-    className="w-32 h-32 md:w-70 md:h-70 bg-white self-center md:justify-right items-right" 
+    className="w-32 h-32 rounded-2xl md:w-70 md:h-70 bg-white self-center md:justify-right items-right" 
   /> 
 </a>
-        <span className="md:text-6xl text-4xl text-center md:[text-shadow:5px_5px_#000000,_-4px_-4px_#000000,_5px_-5px_#000000,_-5px_5px_#000000]">Awesome pictures of my experiences!! </span>
+<div className="flex flex-col items-center justify-center">
+                                       <span className="md:text-6xl text-4xl text-center md:mt-10 md:mb-6 md:[text-shadow:5px_5px_#000000,_-4px_-4px_#000000,_5px_-5px_#000000,_-5px_5px_#000000]">Experience Highlights </span>
+                                        <div className="flex flex-col space-y-20 mt-6 items-center justify-center">
+                                                  
+                                                  <a href="https://itch.io/jam/render-jam" target="_blank" rel="noopener noreferrer" 
+                                           className="
+                                            
+                                             flex flex-col-reverse md:flex-row items-center md:items-start 
+                                             w-[95vw] md:w-full md:max-w-6xl h-auto md:h-80 md:opacity-75 hover:opacity-100
+                                             bg-gray-600 rounded-2xl
+                                             transition hover:scale-105 p-4 md:px-4 md:py-6
+                                           "
+                                        >
+                                          <div className="flex flex-col flex-1 mt-4 md:mt-0">
+                                            <span className="
+                                              text-white text-3xl md:text-7xl 
+                                              leading-tight md:leading-none mb-2
+                                              [text-shadow:3px_3px_#000] md:[text-shadow:5px_5px_#000000,_-4px_-4px_#000000,_5px_-5px_#000000,_-5px_5px_#000000]
+                                            ">
+                                              GPK x GDK: Fall 2025 Render Jam 
+                                            </span>
+                                        
+                                            <span className="text-white text-xl md:text-3xl mb-4 [text-shadow:2px_2px_#000] md:[text-shadow:2px_2px_#000000,_-2px_-2px_#000000,_3px_-3px_#000000,_-3px_3px_#000000]">
+                                              Platform: itch.io
+                                            </span>
+                                        
+                                            <div className="text-white text-sm md:text-lg space-y-2 leading-relaxed">
+                                              <p>Collaboration with the Game Development Knights Organization for a Game Jam exploring graphics and shading techniques.</p>
+                                              <p>Around participation of 30 people and 5 projects submitted at the end of the Jam.</p>
+                                            </div>
+                                          </div>
+                                        
+                                          <Image 
+                                            src={ex2} 
+                                            alt="Render Jam Picture" 
+                                            className="w-32 h-32 md:w-90 md:h-70 rounded-xl bg-purple-500 self-center md:justify-right items-right" 
+                                          /> 
+                                        </a>
+                                        <a href="https://www.instagram.com/knighthacks/" target="_blank" rel="noopener noreferrer" 
+                                           className="
+                                            
+                                             flex flex-col-reverse md:flex-row  md:items-start 
+                                             w-[95vw] md:w-full md:max-w-6xl h-auto md:h-80 md:opacity-75 hover:opacity-100
+                                             bg-pink-800 rounded-2xl
+                                             transition hover:scale-105 p-4 md:px-4 md:py-6
+                                           "
+                                        >
+                                          <div className="flex flex-col flex-1 mt-4 md:mt-0">
+                                            <span className="
+                                              text-white text-3xl md:text-7xl 
+                                              leading-tight md:leading-none mb-2
+                                              [text-shadow:3px_3px_#000] md:[text-shadow:5px_5px_#000000,_-4px_-4px_#000000,_5px_-5px_#000000,_-5px_5px_#000000]
+                                            ">
+                                              Knight Hacks' Spring 2026 Reels Campaign
+                                            </span>
+                                        
+                                            <span className="text-white text-xl md:text-3xl mb-4 [text-shadow:2px_2px_#000] md:[text-shadow:2px_2px_#000000,_-2px_-2px_#000000,_3px_-3px_#000000,_-3px_3px_#000000]">
+                                              Platform: Instagram
+                                            </span>
+                                        
+                                            {/* DESCRIPTION: REMOVE whitespace-nowrap so text wraps on phones */}
+                                            <div className="text-white text-sm md:text-lg space-y-4 leading-relaxed">
+                                                <p>Multiple appeareances on Knight Hacks' Instagram promoting workshops and meetings.</p>
+                                              <p>Average of 5000+ views per post with a significant engagement rate.</p>
+                                        
+                                              
+                                            </div>
+                                          </div>
+                                        
+                                          <Image 
+                                            src={reelsIm} 
+                                            alt="KH Reels" 
+                                            className="w-32 h-32 md:w-40 md:h-70 rounded-xl bg-black self-center md:justify-right items-right" 
+                                          /> 
+                                        </a>
+                                        
+                                        
+                                               
+                                        
+                                                
+                                        
+                                                       
+                                                    
+                                                </div>
+                               
+                                           
+                                                
+                                                    
+         </div>
+        </div>
+         <span className="md:text-6xl text-4xl text-center md:mt-10 md:mb-12 md:[text-shadow:5px_5px_#000000,_-4px_-4px_#000000,_5px_-5px_#000000,_-5px_5px_#000000]">Awesome pictures of my Experiences! </span>
+
             <div className=" w-75 h-65 md:w-130 md:h-90 overflow-hidden flex items-center justify-center md:mb-4 md:-mt-7">
                    <Image 
                      src={currentTopImage.src} 
                      alt={currentTopImage.alt} 
                      
-                     className="object-cover loading='lazy' w-75 h-65 md:w-130 md:h-90" 
+                     className="object-cover rounded-4xl loading='lazy' w-75 h-65 md:w-130 md:h-90" 
                    />
                  </div>
                  <div className="flex md:space-x-45 space-x-10 items-center justify-center">
@@ -207,4 +308,4 @@ const gpkLogo = gpk;
 
                
             
-        </div>    </div>   ); }
+        </div>      ); }

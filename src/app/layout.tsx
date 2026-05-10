@@ -40,12 +40,12 @@ export const metadata: Metadata = {
         icon: "/favicon.ico",
         shortcut: "/favicon.ico",
         apple: "/favicon.ico",
-    },
+  },
     openGraph: {
         type: "website",
         locale: "en_US",
         url: "https://alejaimes.dev",
-        title: "About | Alejandro Jaimes",
+        title: "Alejandro Jaimes",
         description:
             "President of Graphics Programming Knights, Outreach Member of Knight Hacks, UCF Student of Computer Science, and a Venezuelan in Tech",
         siteName: "Alejandro Jaimes",
@@ -56,6 +56,7 @@ export const metadata: Metadata = {
             },
         ],
     },
+  
 };
 export const viewport = {
   width: 'device-width',
