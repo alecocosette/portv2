@@ -266,7 +266,7 @@ const gpkLogo = gpk;
                                         
                                           <Image 
                                             src={reelsIm} 
-                                            alt="KH Reels" 
+                                            alt="Knight Hacks Reels" 
                                             className="w-32 h-32 md:w-40 md:h-70 rounded-xl bg-black self-center md:justify-right items-right" 
                                           /> 
                                         </a>
