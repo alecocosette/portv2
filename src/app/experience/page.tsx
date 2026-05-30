@@ -1,7 +1,9 @@
 'use client';
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import localFont from 'next/font/local'
+import sreal from './sreal-logo1.png';
 import gpk from '../gpknow.png';
 import kh from '../knighthackpic.jpg';
 import hhsf from '../hhsf.png';
@@ -30,6 +32,7 @@ const reelsIm = reels;
 const expImage = gpkexp;
 const rockyIm = rockyAsset;
 const arrowIm = arrow;
+const srealLogo = sreal;
 const gpkLogo = gpk;
   const khLogo = kh;
   const hhsfLogo = hhsf;
@@ -79,18 +82,65 @@ const gpkLogo = gpk;
           <NavButtons />
           </header>
          
-         
-         <div className="flex flex-col space-y-20 mt-6 items-center justify-center">
-          
-          <a href="https://linktr.ee/GPKnights" target="_blank" rel="noopener noreferrer" 
-   className="
-    
-     flex flex-col-reverse md:flex-row items-center md:items-start 
-     w-[95vw] md:w-full md:max-w-6xl h-auto md:h-80 md:opacity-75 hover:opacity-100
-     bg-red-900 rounded-2xl
-     transition hover:scale-105 p-4 md:px-4 md:py-6
-   "
+         <motion.div 
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true, margin: "-50px" }}
+  transition={{ type: "spring", stiffness: 100, damping: 15 }}
+  className="flex flex-col md:flex-row md:space-x-25 md:mt-3 items-center justify-center"
 >
+  
+
+         <div className="flex flex-col space-y-20 mt-6 items-center justify-center">
+          <motion.a 
+            href="https://linktr.ee/GPKnights" target="_blank" rel="noopener noreferrer" 
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            className="flex flex-col-reverse md:flex-row items-center md:items-start w-[95vw] md:w-full md:max-w-6xl h-auto md:h-80 md:opacity-75 hover:opacity-100 bg-gray-700 rounded-2xl p-4 md:px-4 md:py-6"
+        >
+           
+
+    
+    
+  <div className="flex flex-col flex-1 mt-4 md:mt-0">
+    <span className="
+      text-white text-3xl md:text-7xl 
+      leading-tight md:leading-none mb-2
+      [text-shadow:3px_3px_#000] md:[text-shadow:5px_5px_#000000,_-4px_-4px_#000000,_5px_-5px_#000000,_-5px_5px_#000000]
+    ">
+      Software Engineer Intern
+    </span>
+
+    <span className="text-white text-xl md:text-3xl mb-4 [text-shadow:2px_2px_#000] md:[text-shadow:2px_2px_#000000,_-2px_-2px_#000000,_3px_-3px_#000000,_-3px_3px_#000000]">
+      Syntethic Reality Lab (Jun 2026 - Present)
+    </span>
+
+    <div className="text-white text-sm md:text-lg space-y-2 leading-relaxed">
+      <p>Incoming Software Engineer Intern working on XR glasses development.</p>
+      <p></p>
+      <p></p>
+      <p></p>
+    </div>
+  </div>
+
+  <Image 
+    src={srealLogo} 
+    alt="SREAL Logo" 
+    className="w-32 h-32 rounded-2xl md:w-70 md:h-70 bg-white self-center md:justify-right items-right" 
+  /> 
+        </motion.a>
+          <motion.a 
+            href="https://linktr.ee/GPKnights" target="_blank" rel="noopener noreferrer" 
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            className="flex flex-col-reverse md:flex-row items-center md:items-start w-[95vw] md:w-full md:max-w-6xl h-auto md:h-80 md:opacity-75 hover:opacity-100 bg-red-900 rounded-2xl p-4 md:px-4 md:py-6"
+        >
+           
+
+    
+    
   <div className="flex flex-col flex-1 mt-4 md:mt-0">
     <span className="
       text-white text-3xl md:text-7xl 
@@ -101,7 +151,7 @@ const gpkLogo = gpk;
     </span>
 
     <span className="text-white text-xl md:text-3xl mb-4 [text-shadow:2px_2px_#000] md:[text-shadow:2px_2px_#000000,_-2px_-2px_#000000,_3px_-3px_#000000,_-3px_3px_#000000]">
-      Graphics Programming Knights
+      Graphics Programming Knights (May 2026 - Present)
     </span>
 
     <div className="text-white text-sm md:text-lg space-y-2 leading-relaxed">
@@ -117,17 +167,16 @@ const gpkLogo = gpk;
     alt="GPK Logo" 
     className="w-32 h-32 rounded-2xl md:w-70 md:h-70 bg-purple-500 self-center md:justify-right items-right" 
   /> 
-</a>
-<a href="https://blade.knighthacks.org/" target="_blank" rel="noopener noreferrer" 
-   className="
-    
-     flex flex-col-reverse md:flex-row  md:items-start 
-     w-[95vw] md:w-full md:max-w-6xl h-auto md:h-80 md:opacity-75 hover:opacity-100
-     bg-[#a927b8] rounded-2xl
-     transition hover:scale-105 p-4 md:px-4 md:py-6
-   "
->
-  <div className="flex flex-col flex-1 mt-4 md:mt-0">
+        </motion.a>
+         
+          <motion.a 
+            href="https://blade.knighthacks.org" target="_blank" rel="noopener noreferrer" 
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            className="flex flex-col-reverse md:flex-row items-center md:items-start w-[95vw] md:w-full md:max-w-6xl h-auto md:h-80 md:opacity-75 hover:opacity-100 bg-[#a927b8] rounded-2xl p-4 md:px-4 md:py-6"
+        >
+<div className="flex flex-col flex-1 mt-4 md:mt-0">
     <span className="
       text-white text-3xl md:text-7xl 
       leading-tight md:leading-none mb-2
@@ -137,7 +186,7 @@ const gpkLogo = gpk;
     </span>
 
     <span className="text-white text-xl md:text-3xl mb-4 [text-shadow:2px_2px_#000] md:[text-shadow:2px_2px_#000000,_-2px_-2px_#000000,_3px_-3px_#000000,_-3px_3px_#000000]">
-      Knight Hacks
+      Knight Hacks (Jan 2026 - Present)
     </span>
 
     {/* DESCRIPTION: REMOVE whitespace-nowrap so text wraps on phones */}
@@ -155,20 +204,16 @@ const gpkLogo = gpk;
     alt="kh Logo" 
     className="w-32 h-32 rounded-2xl md:w-70 md:h-70 bg-black self-center md:justify-right items-right" 
   /> 
-</a>
+        </motion.a>
 
-
-       
-<a href="https://hhsf.us/meet-our-students/" target="_blank" rel="noopener noreferrer" 
-   className="
-    
-     flex flex-col-reverse md:flex-row items-center md:items-start 
-     w-[95vw] md:w-full md:max-w-6xl h-auto md:h-80 md:opacity-75 hover:opacity-100
-     bg-blue-700 rounded-2xl
-     transition hover:scale-105 p-4 md:px-4 md:py-6
-   "
->
-  <div className="flex flex-col flex-1 mt-4 md:mt-0">
+  <motion.a 
+            href="https://hhsf.us/meet-our-students/" target="_blank" rel="noopener noreferrer" 
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            className="flex flex-col-reverse md:flex-row items-center md:items-start w-[95vw] md:w-full md:max-w-6xl h-auto md:h-80 md:opacity-75 hover:opacity-100 bg-blue-700 rounded-2xl p-4 md:px-4 md:py-6"
+        >
+          <div className="flex flex-col flex-1 mt-4 md:mt-0">
     <span className="
       text-white text-3xl md:text-7xl 
       leading-tight md:leading-none mb-2
@@ -178,7 +223,7 @@ const gpkLogo = gpk;
     </span>
 
     <span className="text-white text-xl md:text-3xl mb-4 [text-shadow:2px_2px_#000] md:[text-shadow:2px_2px_#000000,_-2px_-2px_#000000,_3px_-3px_#000000,_-3px_3px_#000000]">
-      Hispanic Heritage Scholarship Fund
+      Hispanic Heritage Scholarship Fund (2025)
     </span>
 
     <div className="text-white text-sm md:text-lg space-y-5 leading-relaxed">
@@ -194,21 +239,30 @@ const gpkLogo = gpk;
     alt="hhsf Logo" 
     className="w-32 h-32 rounded-2xl md:w-70 md:h-70 bg-white self-center md:justify-right items-right" 
   /> 
-</a>
+        </motion.a>
+
+
+
+       
+
 <div className="flex flex-col items-center justify-center">
-                                       <span className="md:text-6xl text-4xl text-center md:mt-10 md:mb-6 md:[text-shadow:5px_5px_#000000,_-4px_-4px_#000000,_5px_-5px_#000000,_-5px_5px_#000000]">Experience Highlights </span>
+                                       <motion.span 
+      initial={{ opacity: 0, scale: 0.8 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ type: "spring", stiffness: 200, damping: 12 }}
+      className="md:text-6xl text-4xl text-center md:mt-10 md:mb-6 md:[text-shadow:5px_5px_#000000,_-4px_-4px_#000000,_5px_-5px_#000000,_-5px_5px_#000000]"
+    >
+      Experience Highlights 
+    </motion.span>
                                         <div className="flex flex-col space-y-20 mt-6 items-center justify-center">
-                                                  
-                                                  <a href="https://itch.io/jam/render-jam" target="_blank" rel="noopener noreferrer" 
-                                           className="
-                                            
-                                             flex flex-col-reverse md:flex-row items-center md:items-start 
-                                             w-[95vw] md:w-full md:max-w-6xl h-auto md:h-80 md:opacity-75 hover:opacity-100
-                                             bg-gray-600 rounded-2xl
-                                             transition hover:scale-105 p-4 md:px-4 md:py-6
-                                           "
-                                        >
-                                          <div className="flex flex-col flex-1 mt-4 md:mt-0">
+                                                  <motion.a 
+            href="https://itch.io/jam/render-jam" target="_blank" rel="noopener noreferrer" 
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            className="flex flex-col-reverse md:flex-row items-center md:items-start w-[95vw] md:w-full md:max-w-6xl h-auto md:h-80 md:opacity-75 hover:opacity-100 bg-gray-600 rounded-2xl p-4 md:px-4 md:py-6"
+        >
+           <div className="flex flex-col flex-1 mt-4 md:mt-0">
                                             <span className="
                                               text-white text-3xl md:text-7xl 
                                               leading-tight md:leading-none mb-2
@@ -232,17 +286,15 @@ const gpkLogo = gpk;
                                             alt="Render Jam Picture" 
                                             className="w-32 h-32 md:w-90 md:h-70 rounded-xl bg-purple-500 self-center md:justify-right items-right" 
                                           /> 
-                                        </a>
-                                        <a href="https://www.instagram.com/knighthacks/" target="_blank" rel="noopener noreferrer" 
-                                           className="
-                                            
-                                             flex flex-col-reverse md:flex-row  md:items-start 
-                                             w-[95vw] md:w-full md:max-w-6xl h-auto md:h-80 md:opacity-75 hover:opacity-100
-                                             bg-pink-800 rounded-2xl
-                                             transition hover:scale-105 p-4 md:px-4 md:py-6
-                                           "
-                                        >
-                                          <div className="flex flex-col flex-1 mt-4 md:mt-0">
+        </motion.a>
+                                               <motion.a 
+            href="https://www.instagram.com/knighthacks/" target="_blank" rel="noopener noreferrer" 
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            className="flex flex-col-reverse md:flex-row items-center md:items-start w-[95vw] md:w-full md:max-w-6xl h-auto md:h-80 md:opacity-75 hover:opacity-100 bg-pink-800 rounded-2xl p-4 md:px-4 md:py-6"
+        >
+            <div className="flex flex-col flex-1 mt-4 md:mt-0">
                                             <span className="
                                               text-white text-3xl md:text-7xl 
                                               leading-tight md:leading-none mb-2
@@ -258,7 +310,7 @@ const gpkLogo = gpk;
                                             {/* DESCRIPTION: REMOVE whitespace-nowrap so text wraps on phones */}
                                             <div className="text-white text-sm md:text-lg space-y-4 leading-relaxed">
                                                 <p>Multiple appeareances on Knight Hacks' Instagram promoting workshops and meetings.</p>
-                                              <p>Average of 5000+ views per post with a significant engagement rate.</p>
+                                              <p>Average of 5000+ views per post with a significant turnout to events.</p>
                                         
                                               
                                             </div>
@@ -266,10 +318,11 @@ const gpkLogo = gpk;
                                         
                                           <Image 
                                             src={reelsIm} 
-                                            alt="Knight Hacks Reels" 
+                                            alt="KH Reels" 
                                             className="w-32 h-32 md:w-40 md:h-70 rounded-xl bg-black self-center md:justify-right items-right" 
                                           /> 
-                                        </a>
+        </motion.a>
+                                        
                                         
                                         
                                                
@@ -285,7 +338,15 @@ const gpkLogo = gpk;
                                                     
          </div>
         </div>
-         <span className="md:text-6xl text-4xl text-center md:mt-10 md:mb-12 md:[text-shadow:5px_5px_#000000,_-4px_-4px_#000000,_5px_-5px_#000000,_-5px_5px_#000000]">Awesome pictures of my Experiences! </span>
+        </motion.div>
+        <motion.span 
+      initial={{ opacity: 0, scale: 0.8 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ type: "spring", stiffness: 150, damping: 12 }}
+      className="md:text-6xl text-4xl text-center md:mt-10 md:mb-12 md:[text-shadow:5px_5px_#000000,_-4px_-4px_#000000,_5px_-5px_#000000,_-5px_5px_#000000]"
+    >
+      Awesome pictures of my Experiences!  
+    </motion.span>
 
             <div className=" w-75 h-65 md:w-130 md:h-90 overflow-hidden flex items-center justify-center md:mb-4 md:-mt-7">
                    <Image 

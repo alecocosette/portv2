@@ -33,6 +33,7 @@ import community7 from './winPL.png';
 import vrBanquet from './vr.jpg';
 import everybody from './wholeBanquet.jpg';
 import StarBackground from "../components/StarBackground";
+import { motion } from "framer-motion";
 
 export const anotherMarioFont = localFont({
   src:'../mario-party-hudson/dicecondesedlight.ttf',
@@ -110,6 +111,14 @@ const arrowIm = arrow;
           
           <NavButtons />
           </header> 
+
+<motion.div 
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true, margin: "-50px" }}
+  transition={{ type: "spring", stiffness: 100, damping: 15 }}
+  className="flex flex-col md:flex-row md:space-x-25 md:mt-1 items-center justify-center"
+>
 
 
           <main>
@@ -189,6 +198,7 @@ const arrowIm = arrow;
         </div>
       </div>
    </main> 
+   </motion.div>
    <div className="flex flex-col items-center space-y-0 text-white text-right"> 
     <h2 className={`
       text-[6vw] 
@@ -219,10 +229,10 @@ const arrowIm = arrow;
                   <div className="flex space-x-20 mt-6 justify-center">
           
           <a href="https://www.github.com/alecocosette" target="_blank" rel="noopener noreferrer" 
-          className="md:opacity-75 hover:opacity-100 transition flex items-center space-x-3  px-4 w-40 h-15 bg-black">
-           <span className=" text-white text-lg md:text-2xl">GitHub</span> <Image src={GithubLogo} alt="Github Logo" className="w-35 h-15 bg-black  p-1"  /> 
+          className="md:opacity-75 hover:opacity-100 rounded-2xl hover:scale-105 transition flex items-center justify-center  w-40 h-15 bg-black">
+           <span className=" text-white text-lg md:text-3xl">GitHub</span>  
        </a>
           <a href="https://www.linkedin.com/in/alejandro-jaimes-coco/" target="_blank" rel="noopener noreferrer" 
-          className="md:opacity-75 hover:opacity-100 transition flex items-center space-x-3  px-4 w-40 h-15 bg-blue-500">
-           <span className=" text-sky-100 text-lg md:text-2xl">LinkedIn</span> <Image src={LinkLogo} alt="LinkedIn Logo" className="w-35 h-15 scale-100 bg-blue-500"  /> 
+          className="md:opacity-75 hover:opacity-100 rounded-2xl hover:scale-105 transition flex items-center justify-center  w-40 h-15 bg-blue-500">
+           <span className=" text-sky-100 text-lg md:text-3xl">LinkedIn</span> 
        </a> </div>    </div>   ); }

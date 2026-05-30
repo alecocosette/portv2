@@ -51,7 +51,7 @@ export const metadata: Metadata = {
         siteName: "Alejandro Jaimes",
         images: [
             {
-                url: "/prop.jpg",
+                url: "/propcrop.jpg",
                 alt: "Alejandro Jaimes - Software Engineer",
             },
         ],

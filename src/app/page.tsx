@@ -5,7 +5,7 @@ import Link from "next/link";
 import localFont from 'next/font/local'
 import alejandroMP from './alemp.png';
 import resume from './resume.png';
-import linkedin from './linkedin.webp';
+import linkedin from './linkedin.svg';
 import github from './github.png';
 
 export const anotherMarioFont = localFont({
@@ -110,19 +110,19 @@ const StarBackground = dynamic(() => import('./components/StarBackground'), {
            </div>
 
       </main>
-         <div className="flex space-x-10 md:space-x-20 mt-6 md:items-right justify-center">  
+         <div className="flex space-x-10 md:space-x-15 mt-6 md:items-right justify-center">  
           <a href="https://www.github.com/alecocosette" target="_blank" rel="noopener noreferrer" 
-          className="md:opacity-75 hover:opacity-100 transition flex items-center md:space-x-4 px-3 md:px-4 md:w-40 md:h-15 w-25 h-15 bg-black">
-           <span className=" text-white md:text-2xl text-sm">GitHub</span> <Image src={GithubLogo} alt="Github Logo" className="md:w-35 md:h-15 w-15 h-15 bg-black  p-1"  /> 
+          className="md:opacity-75 hover:opacity-100 rounded-2xl hover:scale-105   transition flex items-center justify-center md:w-40 md:h-15 w-25 h-15 bg-black">
+           <span className=" text-white md:text-3xl text-sm">GitHub</span> 
        </a>
             <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" 
-          className="md:opacity-75 hover:opacity-100 transition flex items-center md:space-x-4 px-3 md:px-4 md:w-40 md:h-15 w-25 h-15 bg-gray-400">
-           <span className=" text-white md:text-2xl text-sm ">Resume</span> <Image src={resumeIm} alt="Resume Logo" className="md:w-35 md:h-15 w-11 h-11  md:px-1 bg-gray-400 p-1"  /> 
+          className="md:opacity-75 hover:opacity-100 rounded-2xl hover:scale-105 transition flex items-center justify-center md:w-40 md:h-15 w-25 h-15 bg-gray-400">
+           <span className=" text-white md:text-3xl text-sm ">Resume</span> 
        </a>
        
           <a href="https://www.linkedin.com/in/alejandro-jaimes-coco/" target="_blank" rel="noopener noreferrer" 
-          className="md:opacity-75 hover:opacity-100 transition flex items-center md:space-x-3  px-3 md:px-4 md:w-40 md:h-15 w-25 h-15 bg-blue-500">
-           <span className=" text-sky-100 md:text-2xl text-sm">LinkedIn</span> <Image src={LinkLogo} alt="LinkedIn Logo" className="md:w-35 md:h-15 w-15 h-15 scale-100 bg-blue-500"  /> 
+          className="md:opacity-75 hover:opacity-100 rounded-2xl hover:scale-105 transition flex items-center justify-center md:w-40 md:h-15 w-25 h-15 bg-blue-500">
+           <span className=" text-sky-100 md:text-3xl text-sm items-center  justify-center">LinkedIn</span>  
        </a> </div>
       <div className='loading="eager" items-center w-[30rem] h-[30rem]'>
       <Character /></div>
