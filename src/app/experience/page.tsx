@@ -93,7 +93,7 @@ const gpkLogo = gpk;
 
          <div className="flex flex-col space-y-20 mt-6 items-center justify-center">
           <motion.a 
-            href="https://linktr.ee/GPKnights" target="_blank" rel="noopener noreferrer" 
+            href="https://sreal.ucf.edu/" target="_blank" rel="noopener noreferrer" 
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
