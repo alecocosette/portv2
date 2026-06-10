@@ -5,7 +5,7 @@ import Link from "next/link";
 import localFont from 'next/font/local'
 import sreal from './sreal-logo1.png';
 import gpk from '../gpknow.png';
-import kh from '../knighthackpic.jpg';
+import kh from './profilepicture.svg';
 import hhsf from '../hhsf.png';
 import arrow from '../arrownew.png';
 import rockyAsset from '../rockyAsset-removebg-preview.png'
