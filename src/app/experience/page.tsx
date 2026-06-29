@@ -117,9 +117,11 @@ const gpkLogo = gpk;
     </span>
 
     <div className="text-white text-sm md:text-lg space-y-2 leading-relaxed">
-      <p>Incoming Software Engineer Intern working on XR glasses development.</p>
-      <p></p>
-      <p></p>
+      <p> Software Engineer Intern working on XR glasses development and testing used for various projects.</p>
+      <p>Worked with a team of developers to make an interactive and precise multiuser experience.</p>
+      <p>
+      Created a kiosk mode for the XR application to allow for a faster and more beginner friendly demo for participants.
+      </p>
       <p></p>
     </div>
   </div>
