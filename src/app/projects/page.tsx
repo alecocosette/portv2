@@ -27,10 +27,12 @@ import trickytreats from '../Screenshot 2025-12-22 010921.png';
 import StarBackground from "../components/StarBackground";
 import dylanVid from './dylanHigh.jpg';
 import mathHigh from './mathWorkHigh.png';
+import greg from './greghouse.jpg';
 export const anotherMarioFont = localFont({
   src:'../mario-party-hudson/dicecondesedlight.ttf',
   variable: '--font-anotherMario'
 });
+const gregHouseLogo = greg;
 const mathHighLogo = mathHigh;
 const mathLogo = math;
 const tkrevLogo = tks;
@@ -92,6 +94,19 @@ const dylanVidIm = dylanVid;
   className="flex flex-col md:flex-row md:space-x-25 md:mt-6 items-center justify-center"
 >
     <motion.a 
+        href="https://devpost.com/software/greghouse" target="_blank" rel="noopener noreferrer" 
+        whileHover={{ scale: 1.02 }}
+        whileTap={{ scale: 0.95 }}
+        transition={{ type: "spring", stiffness: 400, damping: 10 }}
+        className="md:opacity-85 hover:opacity-100 rounded-3xl overflow-hidden flex flex-col items-start space-x-4 w-70 h-85 bg-green-800 md:mb-0 mb-6"
+    >
+        <Image src={gregHouseLogo} alt="greghouse Logo" className="w-70 h-40 bg-black "  /> 
+        <span className=" text-white mt-3 md:text-xl text-lg items-start px-2 [text-shadow:2px_2px_#000000,_-2px_-2px_#000000,_2px_-2px_#000000,_-2px_2px_#000000]">greghouse </span>  
+        <span className=" text-white items-start  py-2 px-2">Tomogatchi Watering Plant Reminder with real-time moisture monitoring.</span> 
+        <span className=" text-white items-start  px-2">Technologies: C++, Arduino, ESP32, React, Node.js, AWS, Gemini API </span>
+        <span className=" text-amber-200 text-xl items-center self-center [text-shadow:2px_2px_#000000,_-2px_-2px_#000000,_2px_-2px_#000000,_-2px_2px_#000000]"> Winner </span>
+    </motion.a>
+    <motion.a 
         href="https://github.com/alecocosette/sFun" target="_blank" rel="noopener noreferrer" 
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.95 }}
@@ -118,7 +133,16 @@ const dylanVidIm = dylanVid;
         <span className=" text-amber-200 text-xl items-center self-center [text-shadow:2px_2px_#000000,_-2px_-2px_#000000,_2px_-2px_#000000,_-2px_2px_#000000]"> Winner </span>
     </motion.a>
 
-    <motion.a 
+    
+</motion.div>  
+
+<motion.div 
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true, margin: "-50px" }}
+  transition={{ type: "spring", stiffness: 100, damping: 15, delay: 0.1 }}
+  className="flex flex-col md:flex-row md:space-x-25 md:mt-8 items-center justify-center"
+><motion.a 
         href="https://devpost.com/software/next-step-cme06a" target="_blank" rel="noopener noreferrer" 
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.95 }}
@@ -131,15 +155,6 @@ const dylanVidIm = dylanVid;
         <span className=" text-white items-start  px-2">Technologies: Python, TypeScript, Vapi, React, Next.js, Tailwind </span>
         <span className=" text-amber-200 text-xl items-center self-center [text-shadow:2px_2px_#000000,_-2px_-2px_#000000,_2px_-2px_#000000,_-2px_2px_#000000]"> Winner </span>
     </motion.a>
-</motion.div>  
-
-<motion.div 
-  initial={{ opacity: 0, y: 50 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true, margin: "-50px" }}
-  transition={{ type: "spring", stiffness: 100, damping: 15, delay: 0.1 }}
-  className="flex flex-col md:flex-row md:space-x-25 md:mt-8 items-center justify-center"
->
     <motion.a 
         href="https://devpost.com/software/talk-to-the-hand-lqouas" target="_blank" rel="noopener noreferrer" 
         whileHover={{ scale: 1.02 }}
@@ -166,18 +181,7 @@ const dylanVidIm = dylanVid;
         <span className=" text-white items-start  px-2">Technologies: C#, Unity</span> 
     </motion.a>
 
-    <motion.a 
-        href="https://alecoco.itch.io/tricky-treats" target="_blank" rel="noopener noreferrer" 
-        whileHover={{ scale: 1.02 }}
-        whileTap={{ scale: 0.95 }}
-        transition={{ type: "spring", stiffness: 400, damping: 10 }}
-        className="md:opacity-85 hover:opacity-100 rounded-3xl overflow-hidden flex flex-col items-start space-x-4 w-70 h-85 bg-purple-800 md:mb-0 mb-6"
-    >
-        <Image src={Trickytreats} alt="Github Logo" className="w-70 h-40 bg-black "  /> 
-        <span className=" text-white md:text-xl text-lg items-start px-2 mt-3 [text-shadow:2px_2px_#000000,_-2px_-2px_#000000,_2px_-2px_#000000,_-2px_2px_#000000]">Tricky Treats</span> 
-        <span className=" text-white items-start  py-2 px-2">2D Platformer, First game I have ever made by myself for Halloween</span> 
-        <span className=" text-white items-start  px-2">Technologies: C#, Unity</span> 
-    </motion.a>
+    
 </motion.div>  
 
 <motion.div 
@@ -198,6 +202,18 @@ const dylanVidIm = dylanVid;
         <span className=" text-white md:text-xl mt-3 text-lg items-start px-2 [text-shadow:2px_2px_#000000,_-2px_-2px_#000000,_2px_-2px_#000000,_-2px_2px_#000000]">Math for Making Cool Things Appear on the Screen Workshop</span> 
         <span className=" text-white items-start  py-2 px-2">Workshop diving into how ML, Video Games and Computer Graphics apply Mathematics with examples. </span> 
         <span className=" text-white items-start  px-2"></span> 
+    </motion.a>
+    <motion.a 
+        href="https://alecoco.itch.io/tricky-treats" target="_blank" rel="noopener noreferrer" 
+        whileHover={{ scale: 1.02 }}
+        whileTap={{ scale: 0.95 }}
+        transition={{ type: "spring", stiffness: 400, damping: 10 }}
+        className="md:opacity-85 hover:opacity-100 rounded-3xl overflow-hidden flex flex-col items-start space-x-4 w-70 h-85 bg-purple-800 md:mb-0 mb-6"
+    >
+        <Image src={Trickytreats} alt="Github Logo" className="w-70 h-40 bg-black "  /> 
+        <span className=" text-white md:text-xl text-lg items-start px-2 mt-3 [text-shadow:2px_2px_#000000,_-2px_-2px_#000000,_2px_-2px_#000000,_-2px_2px_#000000]">Tricky Treats</span> 
+        <span className=" text-white items-start  py-2 px-2">2D Platformer, First game I have ever made by myself for Halloween</span> 
+        <span className=" text-white items-start  px-2">Technologies: C#, Unity</span> 
     </motion.a>
 </motion.div>  
 
