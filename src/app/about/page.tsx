@@ -1,78 +1,68 @@
 'use client';
+import { useState } from "react";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
 import localFont from 'next/font/local'
-import { useState } from "react";
-import linkedin from '../linkedin.webp';
-import github from '../github.png';
+
+
 import arrow from '../arrownew.png';
-import ale1 from './alejandroJaimesTK.jpg';
-import ale2 from './headshot.jpg';
-import ale3 from '../IMG_0926.jpg';
-import ale4 from '../IMG_0927.jpg';
-import ale5 from './goesevents.jpg';
-import ale7 from '../IMG_9927.webp';
-import ale8 from './thumbsUp.jpg';
-import ale10 from '../unnamedale2.jpg';
 import rockyAsset from '../rockyAsset-removebg-preview.png'
-import bs1 from '../aboutRow21.jpg';
-import bs2 from '../aboutRow22.jpg';
-import bs4 from '../aboutRow24.jpg';
-import bs5 from '../aboutRow25.jpg';
-import bs6 from '../aboutRow26.jpg';
-import bs7 from '../aboutRow27.jpg';
-import bs8 from '../aboutRow28.jpg';
-import community1 from '../community1 (1).jpg';
-import community2 from '../community1 (2).jpg';
+import StarBackground from "../components/StarBackground";
+
+// first part
+import alewithTK from './alejandroJaimesTK.jpg';
+import aleCrazy from './bloomknightsale.webp';
+import aleFirstKHheadshot from './headshot.jpg';
+import aleThumbsUp from './thumbsUp.jpg';
+import alePicFromShell from '../unnamedale2.jpg';
+import aleConRocky from '../IMG_9927.webp';
+import aleSleeping from '../IMG_0926.jpg';
+import aleEvents from './goesevents.jpg';
+
+
+// second part
+import everybody from './wholeBanquet.jpg';
 import community3 from '../community1 (3).jpg';
 import community4 from '../IMG_1094.jpg';
-import community5 from '../IMG_1095.jpg';
-import community6 from '../zuliafc.jpg';
-import community7 from './winPL.png';
+import bloomTeam from './bloomTeam.webp';
+import winprojectlaunch from './winPL.png';
 import vrBanquet from './vr.jpg';
-import everybody from './wholeBanquet.jpg';
-import StarBackground from "../components/StarBackground";
-import { motion } from "framer-motion";
+import zuliaFC from '../zuliafc.jpg';
+
+
+
 
 export const anotherMarioFont = localFont({
   src:'../mario-party-hudson/dicecondesedlight.ttf',
   variable: '--font-anotherMario'
 });
-const ale7Im = ale7;
-const rockyIm = rockyAsset;
-const ale1Im = ale1;
-const ale2Im = ale2;
-const ale3Im = ale3;  
-const ale4Im = ale4;
-const ale5Im = ale5;
-const ale8Im = ale8;
-const ale10Im = ale10;
-const bs1Im = bs1;
-const bs2Im = bs2;
-const bs4Im = bs4;
-const bs5Im = bs5;
-const bs6Im = bs6;
-const bs7Im = bs7;
-const bs8Im = bs8;
-const community1Im = community1;
-const community2Im = community2;
+const aleTKpic = alewithTK;
+const aleCrazyPic = aleCrazy;
+const aleFirstKHheadshotPic = aleFirstKHheadshot;
+const aleThumbsUpPic = aleThumbsUp;
+const alePicFromShellPic = alePicFromShell;
+const aleConRockyPic = aleConRocky;
+const aleSleepingPic = aleSleeping;
+const aleEventsPic = aleEvents;
+
+const everybodyIm = everybody;
+const zuliaFCIm = zuliaFC;
 const community3Im = community3;
 const community4Im = community4;
-const community5Im = community5;
-const community6Im = community6;
-const community7Im = community7;
 const vrBanquetIm = vrBanquet;
-const everybodyIm = everybody;
+const bloomTeamIm = bloomTeam;
+const winprojectlaunchIm = winprojectlaunch;
+
+const rockyIm = rockyAsset;
 const arrowIm = arrow;
- const GithubLogo = github;
-  const LinkLogo = linkedin;
-   const aleImageList = [{src:ale1Im, alt:"Alejandro Jaimes alongside TK"}, {src: ale2Im, alt:"Alejandro Jaimes Headshot LinkedIn"}, {src: ale8Im, alt: "Alejandro Jaimes giving a thumbs up"},{src: ale10Im, alt: "Alejandro Jaimes at Shell Hacks 2025"}, {src:ale7Im, alt:"Alejandro with dog"} 
-      ,  {src: ale3Im, alt:"Alejandro sleeping with Capybara"}, {src: ale4Im, alt: "alecocosette"},{src: ale5Im, alt: "Alejandro at Knight Hacks Banquet"}];
+
+   const aleImageList = [{src:aleTKpic, alt:"Alejandro Jaimes alongside TK"}, {src: aleCrazyPic, alt:"Alejandro Jaimes Crazy"}, {src: aleFirstKHheadshotPic, alt:"Alejandro Jaimes Headshot LinkedIn"}, {src: aleThumbsUpPic, alt: "Alejandro Jaimes giving a thumbs up"},{src: alePicFromShellPic, alt: "Alejandro Jaimes at Shell Hacks 2025"}, {src:aleConRockyPic, alt:"Alejandro with dog"} 
+      ,  {src: aleSleepingPic, alt:"Alejandro sleeping with Capybara"}, {src: aleEventsPic, alt: "alecocosette"},{src: aleEventsPic, alt: "Alejandro at Knight Hacks Banquet"}];
    const aleListSize = aleImageList.length;
-   const BSList = [{src: bs5Im, alt: ""},{src: bs2Im, alt: "me"}, {src: bs1Im, alt:""}, {src: bs4Im, alt: ""}, {src: bs6Im, alt: ""}, {src: bs7Im, alt: ""}, {src: bs8Im, alt: ""}];
-   const BSSize = BSList.length;
-   const communityList = [{src: everybodyIm, alt: "Everyone in the Knight Hacks Community"},{src: community7Im, alt: "Win at Project Launch"},{src: community3Im, alt: "Knight Hacks celebration"},{src: community5Im, alt: "Hispanic Heritage Scholarship Fund event"},{src: vrBanquetIm, alt: "Alejandro and KH Officers with VR"}, {src: community4Im, alt: "Win at Shell Hacks"}, {src: community6Im, alt: "Zulia FC game"}];
+   
+   const communityList = [{src: everybodyIm, alt: "Everyone in the Knight Hacks Community"},{src: winprojectlaunchIm, alt: "Win at Project Launch"},{src: community3Im, alt: "Knight Hacks celebration"},{src: bloomTeamIm, alt: "Hispanic Heritage Scholarship Fund event"},{src: vrBanquetIm, alt: "Alejandro and KH Officers with VR"}, {src: community4Im, alt: "Win at Shell Hacks"}, {src: zuliaFCIm, alt: "Zulia FC game"}];
    const communitySize = communityList.length;
    const NavButtons = () => ( 
    <div className= "grid grid-cols-2 md:flex md:justify-center md:items-center gap-15 w-full  md:px-0">
@@ -102,7 +92,7 @@ const arrowIm = arrow;
             });    
         };
         const currentTopImage = aleImageList[topImageIndex];
-        const currentBottomImage = BSList[bottomImageIndex];
+      
         const currentCommunityImage = communityList[communityImageIndex];
       return (
         <div className={`relative min-h-screen font-sans p-8 ${anotherMarioFont.className} w-full flex flex-col items-center`}>

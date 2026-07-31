@@ -1,22 +1,15 @@
 'use client';
 import { motion } from "framer-motion";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import localFont from 'next/font/local'
-import alejandroMP from '../alemp.png';
-import resume from '../resume.png';
-import linkedin from '../linkedin.webp';
-import github from '../github.png';
-import { useState } from "react";
 import arrow from '../arrownew.png';
 import rockyAsset from '../rockyAsset-removebg-preview.png'
-import proj1 from '../proj3.jpg';
-import proj2 from './shellhacks1.webp';
-import proj3 from './WINPROJL.jpg';
-import proj4 from '../proj4.jpg';
-import proj5 from '../proj1.jpg';
-import proj6 from './workshopImage.jpg';
-import noimage from '../snes.png';
+
+
+// project images 
+import greg from './greghouse.jpg';
 import math from './mathworkshop.png';
 import tks from './tkrevLogo.jpg';
 import sfun from './sfunlogo.png';
@@ -24,10 +17,23 @@ import talktothehand from '../talktothehand.png';
 import nextstep from '../nextstep.jpg';
 import astrodog from '../astrodog.png';
 import trickytreats from '../Screenshot 2025-12-22 010921.png';
-import StarBackground from "../components/StarBackground";
+
+
+// images at the bottom
+import winPL from './WINPROJL.jpg';
+import bloomWin from './winBloomKnights.webp';
+import shellWin from './shellhacks1.webp';
+import proj6 from './workshopImage.jpg';
+import bloomLocked from './bloomLockedIn.webp';
+import debugwithStevin from '../proj4.jpg'
+
+// project highlights
 import dylanVid from './dylanHigh.jpg';
 import mathHigh from './mathWorkHigh.png';
-import greg from './greghouse.jpg';
+
+import StarBackground from "../components/StarBackground";
+
+
 export const anotherMarioFont = localFont({
   src:'../mario-party-hudson/dicecondesedlight.ttf',
   variable: '--font-anotherMario'
@@ -37,20 +43,18 @@ const mathHighLogo = mathHigh;
 const mathLogo = math;
 const tkrevLogo = tks;
 const Trickytreats = trickytreats;
-const noImage = noimage;
 const talkToTheHand = talktothehand;
 const nextStep = nextstep;
 const astroDog = astrodog;
-const project1 = proj1;
-const project2 = proj2;
-const project3 = proj3;
-const project4 = proj4;
-const project5 = proj5;
+const debugwithStevinIm = debugwithStevin;
+const shellWinPic = shellWin;
+const winPLpic = winPL;
+const bloomLockedPic = bloomLocked;
 const project6 = proj6;
 const rockyIm = rockyAsset;
 const arrowIm = arrow;
 const dylanVidIm = dylanVid;
-   const aleImageList = [{src: project3, alt: "2nd Place Win at Project Launch 2026"}, {src: project2, alt:"3rd Place Statefarm Challenge Shell Hacks 2025"}, {src: project6, alt:"Alejandro explaining in Math Workshop"}, {src: project4, alt: "Debugging in Shell Hacks"}, {src: project1, alt: "Hand Testing Talk to the Hand"}, {src: project5, alt: "Aftermath of Talk to the Hand"}];
+   const aleImageList = [{src: winPLpic, alt: "2nd Place Win at Project Launch 2026"}, {src: bloomWin, alt: "3rd Place Win at Bloom Knights"}, {src: shellWinPic, alt:"3rd Place Statefarm Challenge Shell Hacks 2025"}, {src: project6, alt:"Alejandro explaining in Math Workshop"}, {src: debugwithStevinIm, alt: "Debugging in Shell Hacks"}, {src: bloomLockedPic, alt: "Bloom Locked In"}];
    const aleListSize = aleImageList.length;
    const NavButtons = () => ( 
    <div className= "grid grid-cols-2 md:flex md:justify-center md:items-center gap-15 w-full  md:px-0">
@@ -120,7 +124,7 @@ const dylanVidIm = dylanVid;
     </motion.a>
 
     <motion.a 
-        href="https://www.roblox.com/games/104666495411460/TKs-Revenge" target="_blank" rel="noopener noreferrer" 
+        href="https://kirugames.com/" target="_blank" rel="noopener noreferrer" 
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.95 }}
         transition={{ type: "spring", stiffness: 400, damping: 10 }}

@@ -1,50 +1,65 @@
 'use client';
 import { motion } from "framer-motion";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import localFont from 'next/font/local'
-import sreal from './sreal-logo1.png';
-import gpk from '../gpknow.png';
-import kh from './profilepicture.svg';
-import hhsf from '../hhsf.png';
 import arrow from '../arrownew.png';
 import rockyAsset from '../rockyAsset-removebg-preview.png'
+
+
+// logos
+import sreal from './ist.jpg';
+import gpk from '../gpknow.png';
+import kh from './profilepicture.svg';
+
+
+
+// pictures at the bottom
 import exp1 from '../experience1.jpg';
 import exp2 from '../experience2.png';
 import exp3 from '../experience3.jpg';
-import exp4 from '../experience4.jpg';
 import exp5 from '../experience5.jpg';
 import mog from './mog.png';
 import outreachPic from './outreachPic.png';
-import aurafarm from './aurafarm.jpg';
-import reels from './reel.jpg';
+import srealPicStev from './srealShow.webp';
 import thumbs from './thumbs.png';
-import { useState } from "react";
+
+// highlights
+import reels from './reel.jpg';
 import gpkexp from '../gpkexp.jpg';
+
 import StarBackground from "../components/StarBackground";
 
 export const anotherMarioFont = localFont({
   src:'../mario-party-hudson/dicecondesedlight.ttf',
   variable: '--font-anotherMario'
 });
-const mogging = mog;
-const reelsIm = reels;
-const expImage = gpkexp;
-const rockyIm = rockyAsset;
-const arrowIm = arrow;
+
+// logos
 const srealLogo = sreal;
 const gpkLogo = gpk;
   const khLogo = kh;
-  const hhsfLogo = hhsf;
+
+// highlights
+const reelsIm = reels;
+const expImage = gpkexp;
+
+  
+
+// pictures at the bottom
+  const outreachPicIm = outreachPic;
+  const aurafarmIm = srealPicStev;
   const ex1 = exp1;
   const ex2 = exp2;
   const ex3 = exp3;
-  const ex4 = exp4;
   const ex5 = exp5;
-  const outreachPicIm = outreachPic;
-  const aurafarmIm = aurafarm;
+const mogging = mog;
   const thumbsIm = thumbs;
-   const aleImageList = [{src: outreachPicIm, alt:"Outreach Team Pictures"}, {src: ex1, alt: "Kickstart End"},  {src: ex3, alt:"Scholarship Received"}, {src: mogging, alt: "Mogging"}, {src: ex5, alt: "Scholarship Everybody"}, {src: expImage, alt: "KHVIII GPK Event"}, {src: aurafarmIm, alt: "Aurafarm Instagram"}, {src: thumbsIm, alt: "Alejandro Thumbs Up"}];
+
+const rockyIm = rockyAsset;
+  const arrowIm = arrow;
+   const aleImageList = [{src: aurafarmIm, alt: "Aurafarm Instagram"}, {src: outreachPicIm, alt:"Outreach Team Pictures"}, {src: ex1, alt: "Kickstart End"},  {src: ex3, alt:"Scholarship Received"}, {src: mogging, alt: "Mogging"}, {src: ex5, alt: "Scholarship Everybody"}, {src: expImage, alt: "KHVIII GPK Event"}, {src: thumbsIm, alt: "Alejandro Thumbs Up"}];
    const aleListSize = aleImageList.length;
     const NavButtons = () => ( 
    <div className= "grid grid-cols-2 md:flex md:justify-center md:items-center gap-15 w-full  md:px-0">
@@ -97,7 +112,7 @@ const gpkLogo = gpk;
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
-            className="flex flex-col-reverse md:flex-row items-center md:items-start w-[95vw] md:w-full md:max-w-6xl h-auto md:h-80 md:opacity-75 hover:opacity-100 bg-gray-700 rounded-2xl p-4 md:px-4 md:py-6"
+            className="flex flex-col-reverse md:flex-row items-center md:items-start w-[95vw] md:w-full md:max-w-6xl h-auto md:h-80 md:opacity-75 hover:opacity-100 bg-gray-600 rounded-2xl p-4 md:px-4 md:py-6"
         >
            
 
@@ -113,7 +128,7 @@ const gpkLogo = gpk;
     </span>
 
     <span className="text-white text-xl md:text-3xl mb-4 [text-shadow:2px_2px_#000] md:[text-shadow:2px_2px_#000000,_-2px_-2px_#000000,_3px_-3px_#000000,_-3px_3px_#000000]">
-      Syntethic Reality Lab (Jun 2026 - Present)
+      Institute for Simulation and Training (May 2026 - Present)
     </span>
 
     <div className="text-white text-sm md:text-lg space-y-2 leading-relaxed">
@@ -153,7 +168,7 @@ const gpkLogo = gpk;
     </span>
 
     <span className="text-white text-xl md:text-3xl mb-4 [text-shadow:2px_2px_#000] md:[text-shadow:2px_2px_#000000,_-2px_-2px_#000000,_3px_-3px_#000000,_-3px_3px_#000000]">
-      Graphics Programming Knights (May 2026 - Present)
+      Graphics Programming Knights (Apr 2026 - Present)
     </span>
 
     <div className="text-white text-sm md:text-lg space-y-2 leading-relaxed">
@@ -208,40 +223,7 @@ const gpkLogo = gpk;
   /> 
         </motion.a>
 
-  <motion.a 
-            href="https://hhsf.us/meet-our-students/" target="_blank" rel="noopener noreferrer" 
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.95 }}
-            transition={{ type: "spring", stiffness: 400, damping: 10 }}
-            className="flex flex-col-reverse md:flex-row items-center md:items-start w-[95vw] md:w-full md:max-w-6xl h-auto md:h-80 md:opacity-75 hover:opacity-100 bg-blue-700 rounded-2xl p-4 md:px-4 md:py-6"
-        >
-          <div className="flex flex-col flex-1 mt-4 md:mt-0">
-    <span className="
-      text-white text-3xl md:text-7xl 
-      leading-tight md:leading-none mb-2
-      [text-shadow:3px_3px_#000] md:[text-shadow:5px_5px_#000000,_-4px_-4px_#000000,_5px_-5px_#000000,_-5px_5px_#000000]
-    ">
-      Scholarship Recipient
-    </span>
-
-    <span className="text-white text-xl md:text-3xl mb-4 [text-shadow:2px_2px_#000] md:[text-shadow:2px_2px_#000000,_-2px_-2px_#000000,_3px_-3px_#000000,_-3px_3px_#000000]">
-      Hispanic Heritage Scholarship Fund (2025)
-    </span>
-
-    <div className="text-white text-sm md:text-lg space-y-5 leading-relaxed">
-      <p>I am one of the 50 selected to represent this non-profit representing Hispanic students in Central Florida.</p>
-      <p>Attend workshops and events learning leadership skills and improve the community.</p>
-
-      
-    </div>
-  </div>
-
-  <Image 
-    src={hhsfLogo} 
-    alt="hhsf Logo" 
-    className="w-32 h-32 rounded-2xl md:w-70 md:h-70 bg-white self-center md:justify-right items-right" 
-  /> 
-        </motion.a>
+  
 
 
 
