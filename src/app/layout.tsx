@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Alejandro Jaimes",
   
-  description: "Software Engineer Intern at SREAL in the Institute of Simulation and Training, President of Graphics Programming Knights, Outreach Member of Knight Hacks, UCF Student of Computer Science, and a Venezuelan in Tech",
+  description: "Software Engineer Intern at SREAL in the Institute for Simulation and Training, President of Graphics Programming Knights, Outreach Member of Knight Hacks, UCF Student of Computer Science, and a Venezuelan in Tech",
   keywords:[
     "Alejandro Jaimes",
     "Software Engineer",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
         url: "https://alejaimes.dev",
         title: "Alejandro Jaimes",
         description:
-            "Software Engineer Intern at SREAL in the Institute of Simulation and Training, President of Graphics Programming Knights, Outreach Member of Knight Hacks, UCF Student of Computer Science, and a Venezuelan in Tech",
+            "Software Engineer Intern at SREAL in the Institute for Simulation and Training, President of Graphics Programming Knights, Outreach Member of Knight Hacks, UCF Student of Computer Science, and a Venezuelan in Tech",
         siteName: "Alejandro Jaimes",
         images: [
             {

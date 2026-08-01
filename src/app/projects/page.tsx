@@ -1,5 +1,5 @@
 'use client';
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -66,21 +66,31 @@ const dylanVidIm = dylanVid;
     ); 
   
     
-     export default function Projects(){ 
-      const [topImageIndex, setTopImageIndex] = useState(0);
-            const updateImage = (setter: React.Dispatch<React.SetStateAction<number>>, currentIndex: number, direction: number, listSize: number) => {
-                        setter((prevIndex) => {
-                            let newIndex = prevIndex + direction;
-                            if (newIndex<0){
-                                newIndex = listSize - 1;
-                            }
-                            if (newIndex >= listSize) {
-                                newIndex = 0;
-                            }
-                            return newIndex;
-                        });    
-                    };
-                            const currentTopImage = aleImageList[topImageIndex];
+const slideVariants = {
+  enter: (direction: number) => ({ x: direction > 0 ? 400 : -400, opacity: 0 }),
+  center: { x: 0, opacity: 1 },
+  exit: (direction: number) => ({ x: direction > 0 ? -400 : 400, opacity: 0 }),
+};
+const slideTransition = { type: "spring" as const, stiffness: 300, damping: 20 };
+
+     export default function Projects(){
+        const [topImageIndex, setTopImageIndex] = useState(0);
+        const [topDirection, setTopDirection] = useState(1);
+        const updateImage = (
+            setter: React.Dispatch<React.SetStateAction<number>>,
+            directionSetter: React.Dispatch<React.SetStateAction<number>>,
+            direction: number,
+            listSize: number
+        ) => {
+            directionSetter(direction);
+            setter((prevIndex) => {
+                let newIndex = prevIndex + direction;
+                if (newIndex < 0) newIndex = listSize - 1;
+                if (newIndex >= listSize) newIndex = 0;
+                return newIndex;
+            });
+        };
+        const currentTopImage = aleImageList[topImageIndex];
       return (
         
          <div className={`relative min-h-screen font-sans p-8 ${anotherMarioFont.className} w-full flex flex-col items-center`}>
@@ -90,7 +100,7 @@ const dylanVidIm = dylanVid;
           <NavButtons />
           </header> 
           
-                   <motion.div 
+                   <motion.div
   initial={{ opacity: 0, y: 50 }}
   whileInView={{ opacity: 1, y: 0 }}
   viewport={{ once: true, margin: "-50px" }}
@@ -138,15 +148,15 @@ const dylanVidIm = dylanVid;
     </motion.a>
 
     
-</motion.div>  
+</motion.div>
 
-<motion.div 
+<motion.div
   initial={{ opacity: 0, y: 50 }}
   whileInView={{ opacity: 1, y: 0 }}
   viewport={{ once: true, margin: "-50px" }}
   transition={{ type: "spring", stiffness: 100, damping: 15, delay: 0.1 }}
   className="flex flex-col md:flex-row md:space-x-25 md:mt-8 items-center justify-center"
-><motion.a 
+><motion.a
         href="https://devpost.com/software/next-step-cme06a" target="_blank" rel="noopener noreferrer" 
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.95 }}
@@ -185,17 +195,17 @@ const dylanVidIm = dylanVid;
         <span className=" text-white items-start  px-2">Technologies: C#, Unity</span> 
     </motion.a>
 
-    
-</motion.div>  
 
-<motion.div 
+</motion.div>
+
+<motion.div
   initial={{ opacity: 0, y: 50 }}
   whileInView={{ opacity: 1, y: 0 }}
   viewport={{ once: true, margin: "-50px" }}
   transition={{ type: "spring", stiffness: 100, damping: 15, delay: 0.2 }}
   className="flex flex-col md:flex-row md:space-x-25 md:mt-8 items-center justify-center"
 >
-    <motion.a 
+    <motion.a
         href="https://github.com/GraphicsProgrammingKnights/Workshops/blob/main/Spring%2026/Math%20for%20Making%20Cool%20Things%20Appear%20on%20the%20Screen%20Workshop/MATH%20WORKSHOP.pdf" target="_blank" rel="noopener noreferrer" 
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.95 }}
@@ -219,7 +229,7 @@ const dylanVidIm = dylanVid;
         <span className=" text-white items-start  py-2 px-2">2D Platformer, First game I have ever made by myself for Halloween</span> 
         <span className=" text-white items-start  px-2">Technologies: C#, Unity</span> 
     </motion.a>
-</motion.div>  
+</motion.div>
 
 <div className="flex flex-col items-center justify-center">
     <motion.span 
@@ -277,56 +287,61 @@ const dylanVidIm = dylanVid;
         </motion.a>
     </div>
 
-    <motion.span 
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ type: "spring", stiffness: 200, damping: 15 }}
-      className="md:text-6xl text-4xl text-center md:mt-10 md:mb-6 md:[text-shadow:5px_5px_#000000,_-4px_-4px_#000000,_5px_-5px_#000000,_-5px_5px_#000000]"
+    <span className="md:text-6xl text-4xl text-center md:mt-10 md:mb-6 md:[text-shadow:5px_5px_#000000,_-4px_-4px_#000000,_5px_-5px_#000000,_-5px_5px_#000000]">
+      Cool pictures during my projects!!
+    </span>
+
+    <motion.div
+      whileHover={{ scale: 1.01 }}
+      transition={{ type: "spring", stiffness: 300, damping: 20 }}
+      className="w-75 h-65 md:w-130 md:h-90 overflow-hidden flex items-center justify-center md:mb-4 mb-2 relative rounded-4xl"
     >
-      Cool pictures during my projects!! 
-    </motion.span>
-                                
-    <motion.div 
-      initial={{ scale: 0.9, opacity: 0 }}
-      whileInView={{ scale: 1, opacity: 1 }}
-      transition={{ type: "spring", stiffness: 150, damping: 15 }}
-      className="w-75 h-65 md:w-130 md:h-90 overflow-hidden flex items-center justify-center md:mb-4 mb-2"
-    >
-        <Image 
-        src={currentTopImage.src} 
-        alt={currentTopImage.alt}
-        priority={topImageIndex === 0}
-        placeholder="blur"
-        quality={85}
-         className="object-cover rounded-4xl w-75 h-65 md:w-130 md:h-90" />
+      <AnimatePresence custom={topDirection} mode="sync">
+        <motion.div
+          key={topImageIndex}
+          custom={topDirection}
+          variants={slideVariants}
+          initial="enter"
+          animate="center"
+          exit="exit"
+          transition={slideTransition}
+          className="w-full h-full absolute inset-0"
+        >
+          <Image
+            src={currentTopImage.src}
+            alt={currentTopImage.alt}
+            className="object-cover rounded-4xl w-full h-full"
+          />
+        </motion.div>
+      </AnimatePresence>
     </motion.div>
 
     <div className="flex md:space-x-45 space-x-10 items-center justify-center mb-10">
-        <motion.button 
-          onClick={()=>updateImage(setTopImageIndex,topImageIndex,-1,aleListSize)} 
-          whileHover={{ scale: 1.1, color: "#ef4444" }} 
+        <motion.button
+          onClick={()=>updateImage(setTopImageIndex,setTopDirection,-1,aleListSize)}
+          whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           transition={{ type: "spring", stiffness: 400, damping: 10 }}
           className="text-4xl"
         >
             <Image src={arrowIm} alt="Left Arrow" className="w-10 h-10 md:w-15 md:h-15 transform rotate-180"/>
         </motion.button>
-        
-        <motion.div 
+
+        <motion.div
           whileHover={{ scale: 1.2 }}
           transition={{ type: "spring", stiffness: 400, damping: 10 }}
         >
           <Image src={rockyIm} alt="Rocky Icon" className="w-15 h-10 md:w-20 md:h-15"/>
         </motion.div>
-        
-        <motion.button 
-          onClick={()=>updateImage(setTopImageIndex,topImageIndex,1,aleListSize)} 
-          whileHover={{ scale: 1.1, color: "#ef4444" }}
+
+        <motion.button
+          onClick={()=>updateImage(setTopImageIndex,setTopDirection,1,aleListSize)}
+          whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           transition={{ type: "spring", stiffness: 400, damping: 10 }}
           className="text-4xl"
         >
-            <Image src={arrowIm} alt="Right Arrow" className="w-10 h-10 md:w-15 md:h-15"/>                                   
+            <Image src={arrowIm} alt="Right Arrow" className="w-10 h-10 md:w-15 md:h-15"/>
         </motion.button>
     </div>
 </div> </div> 

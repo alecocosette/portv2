@@ -1,5 +1,5 @@
 'use client';
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -73,21 +73,31 @@ const rockyIm = rockyAsset;
   
     
     
-     export default function ExperiencePage(){ 
-              const [topImageIndex, setTopImageIndex] = useState(0);
-      const updateImage = (setter: React.Dispatch<React.SetStateAction<number>>, currentIndex: number, direction: number, listSize: number) => {
-                  setter((prevIndex) => {
-                      let newIndex = prevIndex + direction;
-                      if (newIndex<0){
-                          newIndex = listSize - 1;
-                      }
-                      if (newIndex >= listSize) {
-                          newIndex = 0;
-                      }
-                      return newIndex;
-                  });    
-              };
-                      const currentTopImage = aleImageList[topImageIndex];
+const slideVariants = {
+  enter: (direction: number) => ({ x: direction > 0 ? 400 : -400, opacity: 0 }),
+  center: { x: 0, opacity: 1 },
+  exit: (direction: number) => ({ x: direction > 0 ? -400 : 400, opacity: 0 }),
+};
+const slideTransition = { type: "spring" as const, stiffness: 300, damping: 20 };
+
+     export default function ExperiencePage(){
+        const [topImageIndex, setTopImageIndex] = useState(0);
+        const [topDirection, setTopDirection] = useState(1);
+        const updateImage = (
+            setter: React.Dispatch<React.SetStateAction<number>>,
+            directionSetter: React.Dispatch<React.SetStateAction<number>>,
+            direction: number,
+            listSize: number
+        ) => {
+            directionSetter(direction);
+            setter((prevIndex) => {
+                let newIndex = prevIndex + direction;
+                if (newIndex < 0) newIndex = listSize - 1;
+                if (newIndex >= listSize) newIndex = 0;
+                return newIndex;
+            });
+        };
+        const currentTopImage = aleImageList[topImageIndex];
 
       return (
         
@@ -97,7 +107,7 @@ const rockyIm = rockyAsset;
           <NavButtons />
           </header>
          
-         <motion.div 
+         <motion.div
   initial={{ opacity: 0, y: 50 }}
   whileInView={{ opacity: 1, y: 0 }}
   viewport={{ once: true, margin: "-50px" }}
@@ -323,33 +333,43 @@ const rockyIm = rockyAsset;
          </div>
         </div>
         </motion.div>
-        <motion.span 
-      initial={{ opacity: 0, scale: 0.8 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      transition={{ type: "spring", stiffness: 150, damping: 12 }}
-      className="md:text-6xl text-4xl text-center md:mt-10 md:mb-12 md:[text-shadow:5px_5px_#000000,_-4px_-4px_#000000,_5px_-5px_#000000,_-5px_5px_#000000]"
-    >
-      Awesome pictures of my Experiences!  
-    </motion.span>
+        <span className="md:text-6xl text-4xl text-center md:mt-10 md:mb-12 md:[text-shadow:5px_5px_#000000,_-4px_-4px_#000000,_5px_-5px_#000000,_-5px_5px_#000000]">
+          Awesome pictures of my Experiences!
+        </span>
 
-            <div className=" w-75 h-65 md:w-130 md:h-90 overflow-hidden flex items-center justify-center md:mb-4 md:-mt-7">
-                   <Image 
-                     src={currentTopImage.src} 
-                     alt={currentTopImage.alt} 
-                     
-                     className="object-cover rounded-4xl loading='lazy' w-75 h-65 md:w-130 md:h-90" 
-                   />
-                 </div>
-                 <div className="flex md:space-x-45 space-x-10 items-center justify-center">
-                   <button onClick={()=>updateImage(setTopImageIndex,topImageIndex,-1,aleListSize)} className="text-4xl hover:text-red-500 transition hover:scale-125">
-                     <Image src={arrowIm} alt="Left Arrow" className="w-10 h-10 md:w-15 md:h-15 transform rotate-180"/>
-                   </button>
-                   <Image src={rockyIm} alt="Rocky Icon" className="w-15 h-10 md:w-20 md:h-15 hover:scale-110" />
-                   <button onClick={()=>updateImage(setTopImageIndex,topImageIndex,1,aleListSize)} className="text-4xl hover:text-red-500 transition hover:scale-125">
-                       <Image src={arrowIm} alt="Right Arrow" className="w-10 h-10 md:w-15 md:h-15"/>
-                     
-                   </button>
-                 </div>
+        <motion.div
+          whileHover={{ scale: 1.01 }}
+          transition={{ type: "spring", stiffness: 300, damping: 20 }}
+          className="w-75 h-65 md:w-130 md:h-90 overflow-hidden flex items-center justify-center md:mb-4 md:-mt-7 relative rounded-4xl"
+        >
+          <AnimatePresence custom={topDirection} mode="sync">
+            <motion.div
+              key={topImageIndex}
+              custom={topDirection}
+              variants={slideVariants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              transition={slideTransition}
+              className="w-full h-full absolute inset-0"
+            >
+              <Image
+                src={currentTopImage.src}
+                alt={currentTopImage.alt}
+                className="object-cover rounded-4xl w-full h-full"
+              />
+            </motion.div>
+          </AnimatePresence>
+        </motion.div>
+        <div className="flex md:space-x-45 space-x-10 items-center justify-center">
+          <button onClick={()=>updateImage(setTopImageIndex,setTopDirection,-1,aleListSize)} className="text-4xl hover:text-red-500 transition hover:scale-125">
+            <Image src={arrowIm} alt="Left Arrow" className="w-10 h-10 md:w-15 md:h-15 transform rotate-180"/>
+          </button>
+          <Image src={rockyIm} alt="Rocky Icon" className="w-15 h-10 md:w-20 md:h-15 hover:scale-110" />
+          <button onClick={()=>updateImage(setTopImageIndex,setTopDirection,1,aleListSize)} className="text-4xl hover:text-red-500 transition hover:scale-125">
+            <Image src={arrowIm} alt="Right Arrow" className="w-10 h-10 md:w-15 md:h-15"/>
+          </button>
+        </div>
 
                
             

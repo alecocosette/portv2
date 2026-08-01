@@ -1,6 +1,6 @@
 'use client';
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
@@ -59,7 +59,7 @@ const rockyIm = rockyAsset;
 const arrowIm = arrow;
 
    const aleImageList = [{src:aleTKpic, alt:"Alejandro Jaimes alongside TK"}, {src: aleCrazyPic, alt:"Alejandro Jaimes Crazy"}, {src: aleFirstKHheadshotPic, alt:"Alejandro Jaimes Headshot LinkedIn"}, {src: aleThumbsUpPic, alt: "Alejandro Jaimes giving a thumbs up"},{src: alePicFromShellPic, alt: "Alejandro Jaimes at Shell Hacks 2025"}, {src:aleConRockyPic, alt:"Alejandro with dog"} 
-      ,  {src: aleSleepingPic, alt:"Alejandro sleeping with Capybara"}, {src: aleEventsPic, alt: "alecocosette"},{src: aleEventsPic, alt: "Alejandro at Knight Hacks Banquet"}];
+      ,  {src: aleSleepingPic, alt:"Alejandro sleeping with Capybara"}, {src: aleEventsPic, alt: "alecocosette"}];
    const aleListSize = aleImageList.length;
    
    const communityList = [{src: everybodyIm, alt: "Everyone in the Knight Hacks Community"},{src: winprojectlaunchIm, alt: "Win at Project Launch"},{src: community3Im, alt: "Knight Hacks celebration"},{src: bloomTeamIm, alt: "Hispanic Heritage Scholarship Fund event"},{src: vrBanquetIm, alt: "Alejandro and KH Officers with VR"}, {src: community4Im, alt: "Win at Shell Hacks"}, {src: zuliaFCIm, alt: "Zulia FC game"}];
@@ -75,21 +75,32 @@ const arrowIm = arrow;
 
 
 
-     export default function AboutPage(){ 
+const slideVariants = {
+  enter: (direction: number) => ({ x: direction > 0 ? 400 : -400, opacity: 0 }),
+  center: { x: 0, opacity: 1 },
+  exit: (direction: number) => ({ x: direction > 0 ? -400 : 400, opacity: 0 }),
+};
+
+const slideTransition = { type: "spring" as const, stiffness: 300, damping: 20, duration: 0.0001 };
+
+     export default function AboutPage(){
         const [topImageIndex, setTopImageIndex] = useState(0);
-        const [bottomImageIndex, setBottomImageIndex] = useState(0);
+        const [topDirection, setTopDirection] = useState(1);
         const [communityImageIndex, setCommunityImageIndex] = useState(0);
-        const updateImage = (setter: React.Dispatch<React.SetStateAction<number>>, currentIndex: number, direction: number, listSize: number) => {
+        const [communityDirection, setCommunityDirection] = useState(1);
+        const updateImage = (
+            setter: React.Dispatch<React.SetStateAction<number>>,
+            directionSetter: React.Dispatch<React.SetStateAction<number>>,
+            direction: number,
+            listSize: number
+        ) => {
+            directionSetter(direction);
             setter((prevIndex) => {
                 let newIndex = prevIndex + direction;
-                if (newIndex<0){
-                    newIndex = listSize - 1;
-                }
-                if (newIndex >= listSize) {
-                    newIndex = 0;
-                }
+                if (newIndex < 0) newIndex = listSize - 1;
+                if (newIndex >= listSize) newIndex = 0;
                 return newIndex;
-            });    
+            });
         };
         const currentTopImage = aleImageList[topImageIndex];
       
@@ -102,13 +113,7 @@ const arrowIm = arrow;
           <NavButtons />
           </header> 
 
-<motion.div 
-  initial={{ opacity: 0, y: 50 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true, margin: "-50px" }}
-  transition={{ type: "spring", stiffness: 100, damping: 15 }}
-  className="flex flex-col md:flex-row md:space-x-25 md:mt-1 items-center justify-center"
->
+<div className="flex flex-col md:flex-row md:space-x-25 md:mt-1 items-center justify-center">
 
 
           <main>
@@ -127,22 +132,33 @@ const arrowIm = arrow;
         </div>
 
         <div className="w-full md:w-1/2 flex flex-col items-center p-4">
-          <div className=" w-140 h-110 overflow-hidden flex items-center justify-center mb-4 md:mt-5">
-            <Image 
-              src={currentTopImage.src} 
-              alt={currentTopImage.alt} 
-              
-              className="object-cover w-full rounded-3xl h-full loading='lazy'" 
-            />
-          </div>
+          <motion.div whileHover={{ scale: 1.01 }} transition={{ type: "spring", stiffness: 200, damping: 20 }} className="w-140 h-110 overflow-hidden flex items-center justify-center mb-4 md:mt-5 relative rounded-3xl">
+            <AnimatePresence custom={topDirection} mode="sync">
+              <motion.div
+                key={topImageIndex}
+                custom={topDirection}
+                variants={slideVariants}
+                initial="enter"
+                animate="center"
+                exit="exit"
+                transition={slideTransition}
+                className="w-full h-full absolute inset-0"
+              >
+                <Image
+                  src={currentTopImage.src}
+                  alt={currentTopImage.alt}
+                  className="object-cover w-full rounded-3xl h-full"
+                />
+              </motion.div>
+            </AnimatePresence>
+          </motion.div>
           <div className="flex space-x-15 md:space-x-30">
-            <button onClick={()=>updateImage(setTopImageIndex,topImageIndex,-1,aleListSize)} className="text-4xl hover:text-red-500 transition hover:scale-125">
+            <button onClick={()=>updateImage(setTopImageIndex,setTopDirection,-1,aleListSize)} className="text-4xl hover:text-red-500 transition hover:scale-125">
               <Image src={arrowIm} alt="Left Arrow" className="w-15 md:w-10 md:h-10 h-12 transform rotate-180"/>
             </button>
             <Image src={rockyIm} alt="Rocky Icon" className="md:w-15 md:h-10 w-18 h-12 hover:scale-110"/>
-            <button onClick={()=>updateImage(setTopImageIndex,topImageIndex,1,aleListSize)} className="text-4xl hover:text-red-500 transition hover:scale-125">
+            <button onClick={()=>updateImage(setTopImageIndex,setTopDirection,1,aleListSize)} className="text-4xl hover:text-red-500 transition hover:scale-125">
                 <Image src={arrowIm} alt="Right Arrow" className="w-15 md:w-10 md:h-10 h-12"/>
-              
             </button>
           </div>
         </div>
@@ -167,28 +183,39 @@ const arrowIm = arrow;
         </div>
 
         <div className="w-full md:w-1/2 flex flex-col items-center p-4">
-          <div className=" w-140 h-110 overflow-hidden flex items-center justify-center mb-4 md:mt-30">
-            <Image 
-              src={currentCommunityImage.src} 
-              alt={currentCommunityImage.alt} 
-              
-              className="object-cover rounded-3xl w-full h-full loading='lazy'" 
-            />
-          </div>
+          <motion.div whileHover={{ scale: 1.01 }} transition={{ type: "spring", stiffness: 200, damping: 20 }} className="w-140 h-110 overflow-hidden flex items-center justify-center mb-4 md:mt-30 relative rounded-3xl">
+            <AnimatePresence custom={communityDirection} mode="sync">
+              <motion.div
+                key={communityImageIndex}
+                custom={communityDirection}
+                variants={slideVariants}
+                initial="enter"
+                animate="center"
+                exit="exit"
+                transition={slideTransition}
+                className="w-full h-full absolute inset-0"
+              >
+                <Image
+                  src={currentCommunityImage.src}
+                  alt={currentCommunityImage.alt}
+                  className="object-cover rounded-3xl w-full h-full"
+                />
+              </motion.div>
+            </AnimatePresence>
+          </motion.div>
           <div className="flex space-x-15 md:space-x-30 mb-8">
-            <button onClick={()=>updateImage(setCommunityImageIndex,communityImageIndex,-1,communitySize)} className="text-4xl hover:text-red-500 transition hover:scale-125">
+            <button onClick={()=>updateImage(setCommunityImageIndex,setCommunityDirection,-1,communitySize)} className="text-4xl hover:text-red-500 transition hover:scale-125">
               <Image src={arrowIm} alt="Left Arrow" className="w-15 md:w-10 md:h-10 h-12 transform rotate-180"/>
             </button>
             <Image src={rockyIm} alt="Rocky Icon" className="md:w-15 md:h-10 w-18 h-12 hover:scale-110"/>
-            <button onClick={()=>updateImage(setCommunityImageIndex,communityImageIndex,1,communitySize)} className="text-4xl hover:text-red-500 transition hover:scale-125">
+            <button onClick={()=>updateImage(setCommunityImageIndex,setCommunityDirection,1,communitySize)} className="text-4xl hover:text-red-500 transition hover:scale-125">
                 <Image src={arrowIm} alt="Right Arrow" className="w-15 md:w-10 md:h-10 h-12"/>
-              
             </button>
           </div>
         </div>
       </div>
-   </main> 
-   </motion.div>
+   </main>
+   </div>
    <div className="flex flex-col items-center space-y-0 text-white text-right"> 
     <h2 className={`
       text-[6vw] 
