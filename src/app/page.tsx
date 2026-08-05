@@ -1,4 +1,5 @@
 'use client';
+import { Analytics } from "@vercel/analytics/next"
 import dynamic from 'next/dynamic';
 import Image from "next/image";
 import Link from "next/link";
@@ -89,7 +90,7 @@ const StarBackground = dynamic(() => import('./components/StarBackground'), {
        style={{
          
        }}>
-    
+    <Analytics />
     {/* This container will now stay perfectly centered because the parent is a flex-center */}
     <StarBackground />
     <div className="flex flex-col items-center justify-between w-full h-full">
