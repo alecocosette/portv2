@@ -12,7 +12,6 @@ import rockyAsset from '../rockyAsset-removebg-preview.png'
 import StarBackground from "../components/StarBackground";
 
 // first part
-import alewithTK from './alejandroJaimesTK.jpg';
 import aleCrazy from './bloomknightsale.webp';
 import aleFirstKHheadshot from './headshot.jpg';
 import aleThumbsUp from './thumbsUp.jpg';
@@ -38,9 +37,9 @@ export const anotherMarioFont = localFont({
   src:'../mario-party-hudson/dicecondesedlight.ttf',
   variable: '--font-anotherMario'
 });
-const aleTKpic = alewithTK;
-const aleCrazyPic = aleCrazy;
-const aleFirstKHheadshotPic = aleFirstKHheadshot;
+const aleTKpic = '/alejandroJaimesTK.jpg';
+const aleCrazyPic = '/bloomknightsale.webp';
+const aleFirstKHheadshotPic = '/headshot.jpg';
 const aleThumbsUpPic = aleThumbsUp;
 const alePicFromShellPic = alePicFromShell;
 const aleConRockyPic = aleConRocky;

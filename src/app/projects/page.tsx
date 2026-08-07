@@ -20,10 +20,6 @@ import trickytreats from '../Screenshot 2025-12-22 010921.png';
 
 
 // images at the bottom
-import winPL from './WINPROJL.jpg';
-import bloomWin from './winBloomKnights.webp';
-import shellWin from './shellhacks1.webp';
-import proj6 from './workshopImage.jpg';
 import bloomLocked from './bloomLockedIn.webp';
 import debugwithStevin from '../proj4.jpg'
 
@@ -45,12 +41,13 @@ const tkrevLogo = tks;
 const Trickytreats = trickytreats;
 const talkToTheHand = talktothehand;
 const nextStep = nextstep;
+const bloomWin ='/winBloomKnights.webp';
 const astroDog = astrodog;
 const debugwithStevinIm = debugwithStevin;
-const shellWinPic = shellWin;
-const winPLpic = winPL;
+const shellWinPic = '/shellhacks1.webp';
+const winPLpic = '/WINPROJL.jpg';
 const bloomLockedPic = bloomLocked;
-const project6 = proj6;
+const project6 = '/workshopImage.jpg';
 const rockyIm = rockyAsset;
 const arrowIm = arrow;
 const dylanVidIm = dylanVid;

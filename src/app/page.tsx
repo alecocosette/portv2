@@ -5,7 +5,6 @@ import dynamic from 'next/dynamic';
 import Image from "next/image";
 import Link from "next/link";
 import localFont from 'next/font/local'
-import alejandroMP from './alemp.png';
 import resume from './resume.png';
 import linkedin from './linkedin.svg';
 import github from './github.png';
@@ -22,7 +21,6 @@ const StarBackground = dynamic(() => import('./components/StarBackground'), {
   ssr: false, 
   loading: () => <div className="fixed inset-0 w-full h-full bg-black" />
 });
- const alejandro = alejandroMP;
  const GithubLogo = github;
   const resumeIm = resume 
   const LinkLogo = linkedin;

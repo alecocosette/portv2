@@ -22,7 +22,6 @@ import exp3 from '../experience3.jpg';
 import exp5 from '../experience5.jpg';
 import mog from './mog.png';
 import outreachPic from './outreachPic.png';
-import srealPicStev from './srealShow.webp';
 import thumbs from './thumbs.png';
 
 // highlights
@@ -49,7 +48,7 @@ const expImage = gpkexp;
 
 // pictures at the bottom
   const outreachPicIm = outreachPic;
-  const aurafarmIm = srealPicStev;
+  const aurafarmIm = '/srealShow.webp';
   const ex1 = exp1;
   const ex2 = exp2;
   const ex3 = exp3;

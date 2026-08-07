@@ -67,7 +67,7 @@ export const metadata: Metadata = {
             { url: "https://alejaimes.dev/winBloomKnights.webp", width: 800, height: 600, alt: "Alejandro Jaimes winning at Bloom Knights" },
             { url: "https://alejaimes.dev/bloomknightsale.webp", width: 800, height: 600, alt: "Alejandro Jaimes at Bloom Knights" },
             { url: "https://alejaimes.dev/workshopImage.jpg", width: 800, height: 600, alt: "Alejandro Jaimes presenting Math Workshop" },
-            { url: "https://alejaimes.dev/greghouse.webp", width: 800, height: 600, alt: "greghouse project by Alejandro Jaimes" },
+            
         ],
     },
     twitter: {
