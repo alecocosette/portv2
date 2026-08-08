@@ -81,8 +81,73 @@ export const metadata: Metadata = {
 export const viewport = {
   width: 'device-width',
   initialScale: 1,
-  
+
 };
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://alejaimes.dev/#person",
+      "name": "Alejandro Jaimes",
+      "url": "https://alejaimes.dev",
+      "image": "https://alejaimes.dev/alejaimes.jpg",
+      "jobTitle": "Software Engineer Intern",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Institute for Simulation and Training (SREAL)"
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "University of Central Florida"
+      },
+      "nationality": "Venezuelan",
+      "knowsAbout": [
+        "Software Engineering",
+        "C++",
+        "Machine Learning",
+        "Computer Vision",
+        "Computer Graphics",
+        "GPU Programming",
+        "Game Development",
+        "Unity"
+      ],
+      "sameAs": [
+        "https://www.github.com/alecocosette",
+        "https://www.linkedin.com/in/alejaimes/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://alejaimes.dev/#website",
+      "url": "https://alejaimes.dev",
+      "name": "Alejandro Jaimes",
+      "publisher": { "@id": "https://alejaimes.dev/#person" }
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "name": "Home",
+      "url": "https://alejaimes.dev/"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "name": "Projects",
+      "url": "https://alejaimes.dev/projects"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "name": "Experience",
+      "url": "https://alejaimes.dev/experience"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "name": "About",
+      "url": "https://alejaimes.dev/about"
+    }
+  ]
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -90,6 +155,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body suppressHydrationWarning={true}
         className={`${geistSans.variable} ${geistMono.variable} antialiased `}
       >
