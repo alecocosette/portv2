@@ -44,7 +44,7 @@ const aleThumbsUpPic = aleThumbsUp;
 const alePicFromShellPic = alePicFromShell;
 const aleConRockyPic = aleConRocky;
 const aleSleepingPic = aleSleeping;
-const aleEventsPic = aleEvents;
+const aleEventsPic = '/thinkingale.jpg';
 
 const everybodyIm = everybody;
 const zuliaFCIm = zuliaFC;
@@ -57,8 +57,8 @@ const winprojectlaunchIm = winprojectlaunch;
 const rockyIm = rockyAsset;
 const arrowIm = arrow;
 
-   const aleImageList = [{src:aleTKpic, alt:"Alejandro Jaimes alongside TK"}, {src: aleCrazyPic, alt:"Alejandro Jaimes Crazy"}, {src: aleFirstKHheadshotPic, alt:"Alejandro Jaimes Headshot LinkedIn"}, {src: aleThumbsUpPic, alt: "Alejandro Jaimes giving a thumbs up"},{src: alePicFromShellPic, alt: "Alejandro Jaimes at Shell Hacks 2025"}, {src:aleConRockyPic, alt:"Alejandro with dog"} 
-      ,  {src: aleSleepingPic, alt:"Alejandro sleeping with Capybara"}, {src: aleEventsPic, alt: "alecocosette"}];
+   const aleImageList = [{src: aleEventsPic, alt: "Alejandro"}, {src:aleTKpic, alt:"Alejandro Jaimes alongside TK"}, {src: aleCrazyPic, alt:"Alejandro Jaimes Crazy"}, {src: aleFirstKHheadshotPic, alt:"Alejandro Jaimes Headshot LinkedIn"}, {src: aleThumbsUpPic, alt: "Alejandro Jaimes giving a thumbs up"},{src: alePicFromShellPic, alt: "Alejandro Jaimes at Shell Hacks 2025"}, {src:aleConRockyPic, alt:"Alejandro with dog"} 
+      ,  {src: aleSleepingPic, alt:"Alejandro sleeping with Capybara"}];
    const aleListSize = aleImageList.length;
    
    const communityList = [{src: everybodyIm, alt: "Everyone in the Knight Hacks Community"},{src: winprojectlaunchIm, alt: "Win at Project Launch"},{src: community3Im, alt: "Knight Hacks celebration"},{src: bloomTeamIm, alt: "Hispanic Heritage Scholarship Fund event"},{src: vrBanquetIm, alt: "Alejandro and KH Officers with VR"}, {src: community4Im, alt: "Win at Shell Hacks"}, {src: zuliaFCIm, alt: "Zulia FC game"}];
@@ -146,6 +146,8 @@ const slideTransition = { type: "spring" as const, stiffness: 300, damping: 20, 
                 <Image
                   src={currentTopImage.src}
                   alt={currentTopImage.alt}
+                  width={800}
+                  height={600}
                   className="object-cover w-full rounded-3xl h-full"
                 />
               </motion.div>
@@ -197,6 +199,8 @@ const slideTransition = { type: "spring" as const, stiffness: 300, damping: 20, 
                 <Image
                   src={currentCommunityImage.src}
                   alt={currentCommunityImage.alt}
+                  width={800}
+                  height={600}
                   className="object-cover rounded-3xl w-full h-full"
                 />
               </motion.div>

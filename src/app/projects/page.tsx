@@ -305,8 +305,11 @@ const slideTransition = { type: "spring" as const, stiffness: 300, damping: 20 }
           className="w-full h-full absolute inset-0"
         >
           <Image
+        
             src={currentTopImage.src}
             alt={currentTopImage.alt}
+            width={800}
+            height={600}
             className="object-cover rounded-4xl w-full h-full"
           />
         </motion.div>

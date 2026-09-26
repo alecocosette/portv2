@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Alejandro Jaimes",
   
-  description: "Software Engineer Intern at SREAL in the Institute for Simulation and Training, President of Graphics Programming Knights, Outreach Member of Knight Hacks, UCF Student of Computer Science, and a Venezuelan in Tech",
+  description: "Software Engineer Intern at BNY & SREAL in the Institute for Simulation and Training, President of Graphics Programming Knights, Outreach Member of Knight Hacks, UCF Student of Computer Science, and a Venezuelan in Tech",
   keywords:[
     "Alejandro Jaimes",
     "Software Engineer",
@@ -34,7 +34,8 @@ export const metadata: Metadata = {
     "Computer Graphics",
     "GPU Programming",
     "Outreach",
-    "Unity"
+    "Unity",
+    "BNY",
 
 
   ],
@@ -54,27 +55,18 @@ export const metadata: Metadata = {
         url: "https://alejaimes.dev",
         title: "Alejandro Jaimes",
         description:
-            "Software Engineer Intern at SREAL in the Institute for Simulation and Training, President of Graphics Programming Knights, Outreach Member of Knight Hacks, UCF Student of Computer Science, and a Venezuelan in Tech",
+            "Software Engineer Intern at BNY & SREAL in the Institute for Simulation and Training, President of Graphics Programming Knights, Outreach Member of Knight Hacks, UCF Student of Computer Science, and a Venezuelan in Tech",
         siteName: "Alejandro Jaimes",
         images: [
-            { url: "https://alejaimes.dev/propcrop.jpg", width: 800, height: 600, alt: "Alejandro Jaimes - Software Engineer" },
-            { url: "https://alejaimes.dev/headshot.jpg", width: 800, height: 600, alt: "Alejandro Jaimes Headshot" },
-            { url: "https://alejaimes.dev/alejaimes.jpg", width: 800, height: 600, alt: "Alejandro Jaimes" },
-            { url: "https://alejaimes.dev/alejandroJaimesTK.jpg", width: 800, height: 600, alt: "Alejandro Jaimes alongside TK" },
-            { url: "https://alejaimes.dev/srealShow.webp", width: 800, height: 600, alt: "Alejandro Jaimes at SREAL" },
-            { url: "https://alejaimes.dev/shellhacks1.webp", width: 800, height: 600, alt: "Alejandro Jaimes winning at Shell Hacks 2025" },
-            { url: "https://alejaimes.dev/WINPROJL.jpg", width: 800, height: 600, alt: "Alejandro Jaimes winning at Project Launch 2026" },
-            { url: "https://alejaimes.dev/winBloomKnights.webp", width: 800, height: 600, alt: "Alejandro Jaimes winning at Bloom Knights" },
-            { url: "https://alejaimes.dev/bloomknightsale.webp", width: 800, height: 600, alt: "Alejandro Jaimes at Bloom Knights" },
-            { url: "https://alejaimes.dev/workshopImage.jpg", width: 800, height: 600, alt: "Alejandro Jaimes presenting Math Workshop" },
+             {url: "https://alejaimes.dev/thinkingale.jpg", width: 800, height: 600, alt: "Alejandro Jaimes" },
             
         ],
     },
     twitter: {
         card: "summary_large_image",
         title: "Alejandro Jaimes",
-        description: "Software Engineer Intern at SREAL in the Institute for Simulation and Training, President of Graphics Programming Knights, Outreach Member of Knight Hacks, UCF Student of Computer Science, and a Venezuelan in Tech",
-        images: ["https://alejaimes.dev/propcrop.jpg"],
+        description: "Software Engineer Intern at BNY & SREAL in the Institute for Simulation and Training, President of Graphics Programming Knights, Outreach Member of Knight Hacks, UCF Student of Computer Science, and a Venezuelan in Tech",
+        images: ["https://alejaimes.dev/thinkingale.jpg"],
     },
   
 };
@@ -92,11 +84,12 @@ const jsonLd = {
       "@id": "https://alejaimes.dev/#person",
       "name": "Alejandro Jaimes",
       "url": "https://alejaimes.dev",
-      "image": "https://alejaimes.dev/alejaimes.jpg",
+      "image": "https://alejaimes.dev/thinkingale.jpg",
       "jobTitle": "Software Engineer Intern",
       "worksFor": {
         "@type": "Organization",
-        "name": "Institute for Simulation and Training (SREAL)"
+        "name": "Bank of New York"
+        
       },
       "alumniOf": {
         "@type": "CollegeOrUniversity",

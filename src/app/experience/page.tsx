@@ -10,9 +10,9 @@ import rockyAsset from '../rockyAsset-removebg-preview.png'
 
 // logos
 import sreal from './ist.jpg';
-import gpk from '../gpknow.png';
+import gpk from './gpklogo.webp';
 import kh from './profilepicture.svg';
-
+import bny from './BNY.png';
 
 
 // pictures at the bottom
@@ -39,7 +39,7 @@ export const anotherMarioFont = localFont({
 const srealLogo = sreal;
 const gpkLogo = gpk;
   const khLogo = kh;
-
+const bnyLogo = bny;
 // highlights
 const reelsIm = reels;
 const expImage = gpkexp;
@@ -106,16 +106,56 @@ const slideTransition = { type: "spring" as const, stiffness: 300, damping: 20 }
           <NavButtons />
           </header>
          
-         <motion.div
-  initial={{ opacity: 0, y: 50 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true, margin: "-50px" }}
-  transition={{ type: "spring", stiffness: 100, damping: 15 }}
-  className="flex flex-col md:flex-row md:space-x-25 md:mt-3 items-center justify-center"
+  <motion.div
+initial={{ opacity: 0, y: 50 }}
+whileInView={{ opacity: 1, y: 0 }}
+viewport={{ once: true, margin: "-50px" }}
+transition={{ type: "spring", stiffness: 100, damping: 15 }}
+className="flex flex-col md:flex-row md:space-x-25 md:mt-3 items-center justify-center"
 >
-  
+
 
          <div className="flex flex-col space-y-20 mt-6 items-center justify-center">
+          <motion.a 
+            href="https://linktr.ee/GPKnights" target="_blank" rel="noopener noreferrer" 
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            className="flex flex-col-reverse md:flex-row items-center w-[95vw] md:w-full md:max-w-6xl h-auto md:min-h-80 md:opacity-75 hover:opacity-100 bg-gray-950 rounded-2xl p-4 md:px-4 md:py-6"
+        >
+
+
+
+
+  <div className="flex flex-col flex-1 mt-4 md:mt-0">
+    <span className="
+      text-white text-3xl md:text-7xl
+      leading-tight md:leading-none mb-2
+      [text-shadow:3px_3px_#000] md:[text-shadow:5px_5px_#000000,_-4px_-4px_#000000,_5px_-5px_#000000,_-5px_5px_#000000]
+    ">
+      Software Engineer Intern
+    </span>
+
+    <span className="text-white text-xl md:text-3xl mb-4 [text-shadow:2px_2px_#000] md:[text-shadow:2px_2px_#000000,_-2px_-2px_#000000,_3px_-3px_#000000,_-3px_3px_#000000]">
+      BNY (Jul 2026 - Present)
+    </span>
+
+    <div className="text-white text-sm md:text-lg space-y-2 leading-relaxed">
+      <p>Working on infrastructure and architecture</p>
+      <p></p>
+      <p></p>
+      <p></p>
+    </div>
+  </div>
+
+  <div className="relative w-32 h-32 md:w-70 md:h-70 flex-shrink-0 self-center">
+    <Image
+      src={bnyLogo}
+      alt="BNY Logo"
+      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 md:w-100 md:h-100  rounded-2xl object-contain"
+    />
+  </div>
+        </motion.a>
           <motion.a 
             href="https://sreal.ucf.edu/" target="_blank" rel="noopener noreferrer" 
             whileHover={{ scale: 1.02 }}
@@ -156,20 +196,23 @@ const slideTransition = { type: "spring" as const, stiffness: 300, damping: 20 }
     className="w-32 h-32 rounded-2xl md:w-70 md:h-70 bg-white self-center md:justify-right items-right" 
   /> 
         </motion.a>
+
+
+        
           <motion.a 
             href="https://linktr.ee/GPKnights" target="_blank" rel="noopener noreferrer" 
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
-            className="flex flex-col-reverse md:flex-row items-center md:items-start w-[95vw] md:w-full md:max-w-6xl h-auto md:h-80 md:opacity-75 hover:opacity-100 bg-red-900 rounded-2xl p-4 md:px-4 md:py-6"
+            className="flex flex-col-reverse md:flex-row items-center w-[95vw] md:w-full md:max-w-6xl h-auto md:min-h-80 md:opacity-75 hover:opacity-100 bg-red-950 rounded-2xl p-4 md:px-4 md:py-6"
         >
-           
 
-    
-    
+
+
+
   <div className="flex flex-col flex-1 mt-4 md:mt-0">
     <span className="
-      text-white text-3xl md:text-7xl 
+      text-white text-3xl md:text-7xl
       leading-tight md:leading-none mb-2
       [text-shadow:3px_3px_#000] md:[text-shadow:5px_5px_#000000,_-4px_-4px_#000000,_5px_-5px_#000000,_-5px_5px_#000000]
     ">
@@ -188,11 +231,13 @@ const slideTransition = { type: "spring" as const, stiffness: 300, damping: 20 }
     </div>
   </div>
 
-  <Image 
-    src={gpkLogo} 
-    alt="GPK Logo" 
-    className="w-32 h-32 rounded-2xl md:w-70 md:h-70 bg-purple-500 self-center md:justify-right items-right" 
-  /> 
+  <div className="relative w-32 h-32 md:w-70 md:h-70 flex-shrink-0 self-center">
+    <Image
+      src={gpkLogo}
+      alt="GPK Logo"
+      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 md:w-120 md:h-120  rounded-2xl object-contain"
+    />
+  </div>
         </motion.a>
          
           <motion.a 
@@ -355,6 +400,8 @@ const slideTransition = { type: "spring" as const, stiffness: 300, damping: 20 }
               <Image
                 src={currentTopImage.src}
                 alt={currentTopImage.alt}
+                 width={800}
+                height={600}
                 className="object-cover rounded-4xl w-full h-full"
               />
             </motion.div>
