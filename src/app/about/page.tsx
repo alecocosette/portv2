@@ -57,7 +57,7 @@ const winprojectlaunchIm = winprojectlaunch;
 const rockyIm = rockyAsset;
 const arrowIm = arrow;
 
-   const aleImageList = [{src: aleEventsPic, alt: "Alejandro"}, {src:aleTKpic, alt:"Alejandro Jaimes alongside TK"}, {src: aleCrazyPic, alt:"Alejandro Jaimes Crazy"}, {src: aleFirstKHheadshotPic, alt:"Alejandro Jaimes Headshot LinkedIn"}, {src: aleThumbsUpPic, alt: "Alejandro Jaimes giving a thumbs up"},{src: alePicFromShellPic, alt: "Alejandro Jaimes at Shell Hacks 2025"}, {src:aleConRockyPic, alt:"Alejandro with dog"} 
+   const aleImageList = [{src:aleTKpic, alt:"Alejandro Jaimes alongside TK"},{src: aleEventsPic, alt: "Alejandro"},  {src: aleCrazyPic, alt:"Alejandro Jaimes Crazy"}, {src: aleFirstKHheadshotPic, alt:"Alejandro Jaimes Headshot LinkedIn"}, {src: aleThumbsUpPic, alt: "Alejandro Jaimes giving a thumbs up"},{src: alePicFromShellPic, alt: "Alejandro Jaimes at Shell Hacks 2025"}, {src:aleConRockyPic, alt:"Alejandro with dog"} 
       ,  {src: aleSleepingPic, alt:"Alejandro sleeping with Capybara"}];
    const aleListSize = aleImageList.length;
    
