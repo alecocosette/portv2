@@ -19,9 +19,10 @@ import alePicFromShell from '../unnamedale2.jpg';
 import aleConRocky from '../IMG_9927.webp';
 import aleSleeping from '../IMG_0926.jpg';
 import aleEvents from './goesevents.jpg';
-
+import aleKH from './alekh.jpeg';
 
 // second part
+import killTRIPLE from './killtriplet.jpg';
 import everybody from './wholeBanquet.jpg';
 import community3 from '../community1 (3).jpg';
 import community4 from '../IMG_1094.jpg';
@@ -29,7 +30,7 @@ import bloomTeam from './bloomTeam.webp';
 import winprojectlaunch from './winPL.png';
 import vrBanquet from './vr.jpg';
 import zuliaFC from '../zuliafc.jpg';
-
+import lsuTrade from './lsutradegood.png'
 
 
 
@@ -53,7 +54,8 @@ const community4Im = community4;
 const vrBanquetIm = vrBanquet;
 const bloomTeamIm = bloomTeam;
 const winprojectlaunchIm = winprojectlaunch;
-
+const tripleKillIm = killTRIPLE;
+const lsuTradeIm = lsuTrade;
 const rockyIm = rockyAsset;
 const arrowIm = arrow;
 
@@ -61,7 +63,12 @@ const arrowIm = arrow;
       ,  {src: aleSleepingPic, alt:"Alejandro sleeping with Capybara"}];
    const aleListSize = aleImageList.length;
    
-   const communityList = [{src: everybodyIm, alt: "Everyone in the Knight Hacks Community"},{src: winprojectlaunchIm, alt: "Win at Project Launch"},{src: community3Im, alt: "Knight Hacks celebration"},{src: bloomTeamIm, alt: "Hispanic Heritage Scholarship Fund event"},{src: vrBanquetIm, alt: "Alejandro and KH Officers with VR"}, {src: community4Im, alt: "Win at Shell Hacks"}, {src: zuliaFCIm, alt: "Zulia FC game"}];
+   const communityList = [{src: everybodyIm, alt: "Everyone in the Knight Hacks Community"},
+     {src: tripleKillIm, alt: "Triple T gets chopped"}, {src: winprojectlaunchIm, alt: "Win at Project Launch"},
+     {src: community3Im, alt: "Knight Hacks celebration"},
+     {src: bloomTeamIm, alt: "Team picture for BloomKnights"},
+     {src: lsuTradeIm, alt: "Alejandro trading for LSU hackathon shirt"},
+     {src: vrBanquetIm, alt: "Alejandro and KH Officers with VR"}, {src: community4Im, alt: "Win at Shell Hacks"}, {src: zuliaFCIm, alt: "Zulia FC game"}];
    const communitySize = communityList.length;
    const NavButtons = () => ( 
    <div className= "grid grid-cols-2 md:flex md:justify-center md:items-center gap-15 w-full  md:px-0">

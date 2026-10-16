@@ -66,7 +66,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Alejandro Jaimes",
         description: "Software Engineer Intern at BNY & SREAL in the Institute for Simulation and Training, President of Graphics Programming Knights, Outreach Member of Knight Hacks, UCF Student of Computer Science, and a Venezuelan in Tech",
-        images: ["https://alejaimes.dev/thinkingale.jpg"],
+        images: ["https://alejaimes.dev/thinkingale.webp"],
     },
   
 };

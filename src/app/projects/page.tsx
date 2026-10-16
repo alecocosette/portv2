@@ -9,6 +9,8 @@ import rockyAsset from '../rockyAsset-removebg-preview.png'
 
 
 // project images 
+import hip from './hip.jpg';
+import permamence from './permanence.jpg';
 import greg from './greghouse.jpg';
 import math from './mathworkshop.png';
 import tks from './tkrevLogo.jpg';
@@ -20,6 +22,8 @@ import trickytreats from '../Screenshot 2025-12-22 010921.png';
 
 
 // images at the bottom
+import khwin from './overallwinkh.jpg';
+import huggingface from './huggingfacewin.jpg';
 import bloomLocked from './bloomLockedIn.webp';
 import debugwithStevin from '../proj4.jpg'
 
@@ -34,6 +38,8 @@ export const anotherMarioFont = localFont({
   src:'../mario-party-hudson/dicecondesedlight.ttf',
   variable: '--font-anotherMario'
 });
+const hipLogo = hip;
+const permamenceLogo = permamence;
 const gregHouseLogo = greg;
 const mathHighLogo = mathHigh;
 const mathLogo = math;
@@ -51,7 +57,9 @@ const project6 = '/workshopImage.jpg';
 const rockyIm = rockyAsset;
 const arrowIm = arrow;
 const dylanVidIm = dylanVid;
-   const aleImageList = [{src: winPLpic, alt: "2nd Place Win at Project Launch 2026"}, {src: bloomWin, alt: "3rd Place Win at Bloom Knights"}, {src: shellWinPic, alt:"3rd Place Statefarm Challenge Shell Hacks 2025"}, {src: project6, alt:"Alejandro explaining in Math Workshop"}, {src: debugwithStevinIm, alt: "Debugging in Shell Hacks"}, {src: bloomLockedPic, alt: "Bloom Locked In"}];
+const khwinPic = khwin;
+const hugging = huggingface;
+   const aleImageList = [{src: khwinPic, alt: "1st Overall at Knight Hacks IX"},{src: winPLpic, alt: "2nd Place Win at Project Launch 2026"}, {src: bloomWin, alt: "3rd Place Win at Bloom Knights"}, {src: hugging, alt: "Hugging Face win at Knight Hacks IX"},{src: shellWinPic, alt:"3rd Place Statefarm Challenge Shell Hacks 2025"}, {src: project6, alt:"Alejandro explaining in Math Workshop"}, {src: debugwithStevinIm, alt: "Debugging in Shell Hacks"}, {src: bloomLockedPic, alt: "Bloom Locked In"}];
    const aleListSize = aleImageList.length;
    const NavButtons = () => ( 
    <div className= "grid grid-cols-2 md:flex md:justify-center md:items-center gap-15 w-full  md:px-0">
@@ -105,6 +113,19 @@ const slideTransition = { type: "spring" as const, stiffness: 300, damping: 20 }
   className="flex flex-col md:flex-row md:space-x-25 md:mt-6 items-center justify-center"
 >
     <motion.a 
+        href="https://devpost.com/software/permanence" target="_blank" rel="noopener noreferrer" 
+        whileHover={{ scale: 1.02 }}
+        whileTap={{ scale: 0.95 }}
+        transition={{ type: "spring", stiffness: 400, damping: 10 }}
+        className="md:opacity-85 hover:opacity-100 rounded-3xl overflow-hidden flex flex-col items-start space-x-4 w-70 h-85 bg-purple-600 md:mb-0 mb-6"
+    >
+        <Image src={permamenceLogo} alt="Permanence Logo" className="w-70 h-40 bg-black "  /> 
+        <span className=" text-white mt-3 md:text-xl text-lg items-start px-2 [text-shadow:2px_2px_#000000,_-2px_-2px_#000000,_2px_-2px_#000000,_-2px_2px_#000000]">Permanence </span>  
+        <span className=" text-white items-start  py-2 px-2">Robot used to push object permanence research entirely for robotics.</span> 
+        <span className=" text-white items-start  px-2">Technologies: C++, CUDA, C#, Unity, Python, PyTorch, XREAL </span>
+        <span className=" text-amber-200 text-xl items-center self-center [text-shadow:2px_2px_#000000,_-2px_-2px_#000000,_2px_-2px_#000000,_-2px_2px_#000000]"> Winner </span>
+    </motion.a>
+    <motion.a 
         href="https://devpost.com/software/greghouse" target="_blank" rel="noopener noreferrer" 
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.95 }}
@@ -130,6 +151,31 @@ const slideTransition = { type: "spring" as const, stiffness: 300, damping: 20 }
         <span className=" text-white md:text-base items-start px-2">Technologies: C++, C, CMake, SDL2, Assembly</span>
     </motion.a>
 
+    
+
+    
+</motion.div>
+
+<motion.div
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true, margin: "-50px" }}
+  transition={{ type: "spring", stiffness: 100, damping: 15, delay: 0.1 }}
+  className="flex flex-col md:flex-row md:space-x-25 md:mt-8 items-center justify-center"
+>
+    <motion.a
+        href="https://devpost.com/software/next-step-cme06a" target="_blank" rel="noopener noreferrer" 
+        whileHover={{ scale: 1.02 }}
+        whileTap={{ scale: 0.95 }}
+        transition={{ type: "spring", stiffness: 400, damping: 10 }}
+        className="md:opacity-85 hover:opacity-100 rounded-3xl overflow-hidden flex flex-col items-start space-x-4 w-70 h-85 bg-red-800 md:mb-0 mb-6"
+    >
+        <Image src={hipLogo} alt="HIP Renderer Logo" className="w-70 h-40 bg-black "  /> 
+        <span className=" text-white mt-3 md:text-xl text-lg items-start px-2 [text-shadow:2px_2px_#000000,_-2px_-2px_#000000,_2px_-2px_#000000,_-2px_2px_#000000]">HIP Renderer </span>  
+        <span className=" text-white items-start  py-2 px-2">GPU-accelerated path tracer in HIP.</span> 
+        <span className=" text-white items-start  px-2">Technologies: C++, HIP, ROCm, Python, Linux </span>
+        <span className=" text-amber-200 text-xl items-center self-center [text-shadow:2px_2px_#000000,_-2px_-2px_#000000,_2px_-2px_#000000,_-2px_2px_#000000]">  </span>
+    </motion.a>
     <motion.a 
         href="https://kirugames.com/" target="_blank" rel="noopener noreferrer" 
         whileHover={{ scale: 1.02 }}
@@ -143,17 +189,34 @@ const slideTransition = { type: "spring" as const, stiffness: 300, damping: 20 }
         <span className=" text-white items-start  px-2">Technologies: Roblox Engine, LuaU</span>
         <span className=" text-amber-200 text-xl items-center self-center [text-shadow:2px_2px_#000000,_-2px_-2px_#000000,_2px_-2px_#000000,_-2px_2px_#000000]"> Winner </span>
     </motion.a>
+    
+    <motion.a
+        href="https://github.com/GraphicsProgrammingKnights/Workshops/blob/main/Spring%2026/Math%20for%20Making%20Cool%20Things%20Appear%20on%20the%20Screen%20Workshop/MATH%20WORKSHOP.pdf" target="_blank" rel="noopener noreferrer" 
+        whileHover={{ scale: 1.02 }}
+        whileTap={{ scale: 0.95 }}
+        transition={{ type: "spring", stiffness: 400, damping: 10 }}
+        className="md:opacity-85 hover:opacity-100 rounded-3xl overflow-hidden flex flex-col items-start space-x-4 w-70 h-85 bg-pink-800 md:mb-0 mb-6" 
+    >
+        <Image src={mathLogo} alt="Math Workshop Logo" className="w-70 h-40 bg-black"  /> 
+        <span className=" text-white md:text-xl mt-3 text-lg items-start px-2 [text-shadow:2px_2px_#000000,_-2px_-2px_#000000,_2px_-2px_#000000,_-2px_2px_#000000]">Math for Making Cool Things Appear on the Screen Workshop</span> 
+        <span className=" text-white items-start  py-2 px-2">Workshop diving into how ML, Video Games and Computer Graphics apply Mathematics with examples. </span> 
+        <span className=" text-white items-start  px-2"></span> 
+    </motion.a>
+    
 
     
+
+
 </motion.div>
 
 <motion.div
   initial={{ opacity: 0, y: 50 }}
   whileInView={{ opacity: 1, y: 0 }}
   viewport={{ once: true, margin: "-50px" }}
-  transition={{ type: "spring", stiffness: 100, damping: 15, delay: 0.1 }}
+  transition={{ type: "spring", stiffness: 100, damping: 15, delay: 0.2 }}
   className="flex flex-col md:flex-row md:space-x-25 md:mt-8 items-center justify-center"
-><motion.a
+>
+     <motion.a
         href="https://devpost.com/software/next-step-cme06a" target="_blank" rel="noopener noreferrer" 
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.95 }}
@@ -167,19 +230,6 @@ const slideTransition = { type: "spring" as const, stiffness: 300, damping: 20 }
         <span className=" text-amber-200 text-xl items-center self-center [text-shadow:2px_2px_#000000,_-2px_-2px_#000000,_2px_-2px_#000000,_-2px_2px_#000000]"> Winner </span>
     </motion.a>
     <motion.a 
-        href="https://devpost.com/software/talk-to-the-hand-lqouas" target="_blank" rel="noopener noreferrer" 
-        whileHover={{ scale: 1.02 }}
-        whileTap={{ scale: 0.95 }}
-        transition={{ type: "spring", stiffness: 400, damping: 10 }}
-        className="md:opacity-85 hover:opacity-100 rounded-3xl overflow-hidden flex flex-col items-start space-x-4 w-70 h-85 bg-emerald-500 md:mb-0 mb-6" 
-    >
-        <Image src={talkToTheHand} alt="TTTH Logo" className="w-70 h-40 bg-black"  /> 
-        <span className=" text-white md:text-xl mt-3 text-lg items-start px-2 [text-shadow:2px_2px_#000000,_-2px_-2px_#000000,_2px_-2px_#000000,_-2px_2px_#000000]">Talk to the Hand</span> 
-        <span className=" text-white items-start  py-2 px-2">Computer Vision 3D Shooter game made during Knight Hacks VIII </span> 
-        <span className=" text-white items-start  px-2">Technologies: C#, Unity, Python, Mediapipe, OpenCV</span> 
-    </motion.a>
-
-    <motion.a 
         href="https://alecoco.itch.io/astrodog" target="_blank" rel="noopener noreferrer" 
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.95 }}
@@ -191,40 +241,17 @@ const slideTransition = { type: "spring" as const, stiffness: 300, damping: 20 }
         <span className=" text-white items-start  py-2 px-2">2D Platformer game made in Unity inspired on my dog for Game Dev Knights' Space Jam</span> 
         <span className=" text-white items-start  px-2">Technologies: C#, Unity</span> 
     </motion.a>
-
-
-</motion.div>
-
-<motion.div
-  initial={{ opacity: 0, y: 50 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true, margin: "-50px" }}
-  transition={{ type: "spring", stiffness: 100, damping: 15, delay: 0.2 }}
-  className="flex flex-col md:flex-row md:space-x-25 md:mt-8 items-center justify-center"
->
-    <motion.a
-        href="https://github.com/GraphicsProgrammingKnights/Workshops/blob/main/Spring%2026/Math%20for%20Making%20Cool%20Things%20Appear%20on%20the%20Screen%20Workshop/MATH%20WORKSHOP.pdf" target="_blank" rel="noopener noreferrer" 
-        whileHover={{ scale: 1.02 }}
-        whileTap={{ scale: 0.95 }}
-        transition={{ type: "spring", stiffness: 400, damping: 10 }}
-        className="md:opacity-85 hover:opacity-100 rounded-3xl overflow-hidden flex flex-col items-start space-x-4 w-70 h-85 bg-pink-800 md:mb-0 mb-6" 
-    >
-        <Image src={mathLogo} alt="Math Workshop Logo" className="w-70 h-40 bg-black"  /> 
-        <span className=" text-white md:text-xl mt-3 text-lg items-start px-2 [text-shadow:2px_2px_#000000,_-2px_-2px_#000000,_2px_-2px_#000000,_-2px_2px_#000000]">Math for Making Cool Things Appear on the Screen Workshop</span> 
-        <span className=" text-white items-start  py-2 px-2">Workshop diving into how ML, Video Games and Computer Graphics apply Mathematics with examples. </span> 
-        <span className=" text-white items-start  px-2"></span> 
-    </motion.a>
     <motion.a 
-        href="https://alecoco.itch.io/tricky-treats" target="_blank" rel="noopener noreferrer" 
+        href="https://devpost.com/software/talk-to-the-hand-lqouas" target="_blank" rel="noopener noreferrer" 
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.95 }}
         transition={{ type: "spring", stiffness: 400, damping: 10 }}
-        className="md:opacity-85 hover:opacity-100 rounded-3xl overflow-hidden flex flex-col items-start space-x-4 w-70 h-85 bg-purple-800 md:mb-0 mb-6"
+        className="md:opacity-85 hover:opacity-100 rounded-3xl overflow-hidden flex flex-col items-start space-x-4 w-70 h-85 bg-emerald-500 md:mb-0 mb-6" 
     >
-        <Image src={Trickytreats} alt="Github Logo" className="w-70 h-40 bg-black "  /> 
-        <span className=" text-white md:text-xl text-lg items-start px-2 mt-3 [text-shadow:2px_2px_#000000,_-2px_-2px_#000000,_2px_-2px_#000000,_-2px_2px_#000000]">Tricky Treats</span> 
-        <span className=" text-white items-start  py-2 px-2">2D Platformer, First game I have ever made by myself for Halloween</span> 
-        <span className=" text-white items-start  px-2">Technologies: C#, Unity</span> 
+        <Image src={talkToTheHand} alt="TTTH Logo" className="w-70 h-40 bg-black"  /> 
+        <span className=" text-white md:text-xl mt-3 text-lg items-start px-2 [text-shadow:2px_2px_#000000,_-2px_-2px_#000000,_2px_-2px_#000000,_-2px_2px_#000000]">Talk to the Hand</span> 
+        <span className=" text-white items-start  py-2 px-2">Computer Vision 3D Shooter game made during Knight Hacks VIII </span> 
+        <span className=" text-white items-start  px-2">Technologies: C#, Unity, Python, Mediapipe, OpenCV</span> 
     </motion.a>
 </motion.div>
 
