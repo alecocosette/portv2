@@ -46,7 +46,7 @@ const alePicFromShellPic = alePicFromShell;
 const aleConRockyPic = aleConRocky;
 const aleSleepingPic = aleSleeping;
 const aleEventsPic = '/thinkingale.webp';
-
+const aleKHpic = aleKH;
 const everybodyIm = everybody;
 const zuliaFCIm = zuliaFC;
 const community3Im = community3;
@@ -59,7 +59,7 @@ const lsuTradeIm = lsuTrade;
 const rockyIm = rockyAsset;
 const arrowIm = arrow;
 
-   const aleImageList = [{src: aleEventsPic, alt: "Alejandro"},  {src: aleCrazyPic, alt:"Alejandro Jaimes Crazy"},{src:aleTKpic, alt:"Alejandro Jaimes alongside TK"}, {src: aleFirstKHheadshotPic, alt:"Alejandro Jaimes Headshot LinkedIn"}, {src: aleThumbsUpPic, alt: "Alejandro Jaimes giving a thumbs up"},{src: alePicFromShellPic, alt: "Alejandro Jaimes at Shell Hacks 2025"}, {src:aleConRockyPic, alt:"Alejandro with dog"} 
+   const aleImageList = [{src: aleEventsPic, alt: "Alejandro"},  {src: aleCrazyPic, alt:"Alejandro Jaimes Crazy"},{src:aleTKpic, alt:"Alejandro Jaimes alongside TK"}, {src: aleFirstKHheadshotPic, alt:"Alejandro Jaimes Headshot LinkedIn"}, {src: aleThumbsUpPic, alt: "Alejandro Jaimes giving a thumbs up"},{src: aleKHpic, alt: "Alejandro Jaimes at Knight Hacks IV"}, {src:aleConRockyPic, alt:"Alejandro with dog"} 
       ,  {src: aleSleepingPic, alt:"Alejandro sleeping with Capybara"}];
    const aleListSize = aleImageList.length;
    
