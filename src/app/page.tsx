@@ -116,11 +116,14 @@ const StarBackground = dynamic(() => import('./components/StarBackground'), {
           className="md:opacity-75 hover:opacity-100 rounded-2xl hover:scale-105   transition flex items-center justify-center md:w-40 md:h-15 w-25 h-15 bg-black">
            <span className=" text-white md:text-3xl text-sm">GitHub</span> 
        </a>
+       {/*
+
+       
             <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" 
           className="md:opacity-75 hover:opacity-100 rounded-2xl hover:scale-105 transition flex items-center justify-center md:w-40 md:h-15 w-25 h-15 bg-gray-400">
            <span className=" text-white md:text-3xl text-sm ">Resume</span> 
        </a>
-       
+     */}
           <a href="https://www.linkedin.com/in/alejaimes/" target="_blank" rel="noopener noreferrer" 
           className="md:opacity-75 hover:opacity-100 rounded-2xl hover:scale-105 transition flex items-center justify-center md:w-40 md:h-15 w-25 h-15 bg-blue-500">
            <span className=" text-sky-100 md:text-3xl text-sm items-center  justify-center">LinkedIn</span>  

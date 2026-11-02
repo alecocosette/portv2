@@ -117,7 +117,7 @@ className="flex flex-col md:flex-row md:space-x-25 md:mt-3 items-center justify-
 
          <div className="flex flex-col space-y-20 mt-6 items-center justify-center">
           <motion.a 
-            href="https://linktr.ee/GPKnights" target="_blank" rel="noopener noreferrer" 
+            href="https://www.bny.com/corporate/global/en.html" target="_blank" rel="noopener noreferrer" 
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
@@ -137,7 +137,7 @@ className="flex flex-col md:flex-row md:space-x-25 md:mt-3 items-center justify-
     </span>
 
     <span className="text-white text-xl md:text-3xl mb-4 [text-shadow:2px_2px_#000] md:[text-shadow:2px_2px_#000000,_-2px_-2px_#000000,_3px_-3px_#000000,_-3px_3px_#000000]">
-      BNY (Jul 2026 - Present)
+      BNY (Aug 2026 - Present)
     </span>
 
     <div className="text-white text-sm md:text-lg space-y-2 leading-relaxed">
